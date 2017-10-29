@@ -2,14 +2,13 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+I am a computing security student at Rochester Institute of Technology. If I have something to do, I'll probably write a python script for it. I run a virtualized homelab for sysadmin and networking practice.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+### Activities
+- Member of RIT Competitive Cybersecurity Club (RC3)
+- Member of Security Practices and Research Student Association (SPARSA)
+- White Team, SPARSA's Information Security Talent Search (ISTS), Spring 2017
+- Team Captain, RC3's IRSEC, Spring 2017, 2nd Place
