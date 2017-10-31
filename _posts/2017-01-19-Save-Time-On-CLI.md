@@ -9,7 +9,7 @@ Command-line interfaces (CLI) give users the ability to quickly execute commands
 
 The popular shorthand notation for the phrase "Too long; didn't read" simplies long and extensive text into a few main points. [TLDR Pages]("https://tldr-pages.github.io/) does the same for man pages. Installation via npm is very easy and quick. Afterwards, typing `tldr $command` will show a straightforward man page for `$command`.
 
-![TLDR Example]({{site.baseurl}}/images/Save-Time-On-CLI/tldr_page_ex.png)
+![TLDR Example]({{site.baseurl}}/images/Save-Time-On-CLI/tldr-page-ex.png)
 
 TLDR pages work on linux and OS X. There is also a [web app interface]("https://tldr.ostera.io/") for less immediate results. For OS X specific commands type `osx/$command`. Man pages are still useful for more extensive options, but tldr is handy for quick lookups.
 
@@ -17,7 +17,7 @@ TLDR pages work on linux and OS X. There is also a [web app interface]("https://
 
 TLDR is useful for remembering, but [Climate]("https://github.com/adtac/climate") actually shortens and runs commands. Installation requires cloning the Github repository and running the install script. Climate commands are grouped into categories such as monitoring performance, SSHing to upload and download files, and network tools to run a speed test or view used ports. There are some small but useful commands such as a console clock, getting the weather, and a nice overview for system performance. Learning the real commands for normal functions is imperative, but these shortcuts still add convenient features.
 
-![Climate Example]({{site.baseurl}}/images/Save-Time-On-CLI/climate_ex.png)
+![Climate Example]({{site.baseurl}}/images/Save-Time-On-CLI/climate-ex.png)
 
 ### Resources
 
