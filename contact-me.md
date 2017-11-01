@@ -5,7 +5,7 @@ permalink: /contact-me/
 published: true
 ---
 
-<form action="https://formspree.io/becksteadn@gmail.com">
+<form action="https://formspree.io/becksteadn@gmail.com" method="POST">
 
   <header>
     <div>Request a resume or just ask a question!</div>
