@@ -21,10 +21,10 @@ TLDR is useful for remembering, but [Climate]("https://github.com/adtac/climate"
 
 ### Resources
 
-[Climate Github Page]("https://github.com/adtac/climate")
+[Climate Github Page](https://github.com/adtac/climate)
 
-[TLDR Github Page]("https://github.com/tldr-pages/tldr")
+[TLDR Github Page](https://github.com/tldr-pages/tldr)
 
-[TLDR Web App]("https://tldr.ostera.io/")
+[TLDR Web App](https://tldr.ostera.io/)
 
-[NODE Video on Simplifying CLI]("https://www.youtube.com/watch?v=kWmJcVdCdLo")
+[NODE Video on Simplifying CLI](https://www.youtube.com/watch?v=kWmJcVdCdLo)
