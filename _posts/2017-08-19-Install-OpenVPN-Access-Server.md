@@ -17,11 +17,11 @@ Then install the package
 
 `sudo dpkg -i openvpn-as-2.1.9-Ubuntu16.amd_64.deb`
 
-The install finishes with telling you to change the password of the <code>openvpn</code> user. This is the initial administrator account.
+The install finishes with telling you to change the password of the `openvpn` user. This is the initial administrator account.
 
 `sudo passwd openvpn`
 
-Finally, access the login page at: `https://&lt;server-ip&gt;:943/admin/`.
+Finally, access the login page at: `https://<server-ip>:943/admin/`.
 
 ![Web Login]({{site.baseurl}}/images/Install-OpenVPN-Access-Server/web-login.png)
 
@@ -29,13 +29,14 @@ Finally, access the login page at: `https://&lt;server-ip&gt;:943/admin/`.
 
 ### Local
 
-Local authentication uses profiles created in the interface. Profiles can be found under `User Management -&gt; User Permissions`.
+Local authentication uses profiles created in the interface. Profiles can be found under `User Management - User Permissions`.
 
 ![Permissions]({{site.baseurl}}/images/Install-OpenVPN-Access-Server/homepage.png)
 
-Enter a new username and then click `Show` to set a password for the user. After making any changes, you will need to update the running server by clicking the button that appears. Clients can then access their profile at `https://&lt;server-ip&gt;:943/`. Users can log in and download the OS specific program, and OpenVPN profile. User's access can be revoked or modified in this area too.
+Enter a new username and then click `Show` to set a password for the user. After making any changes, you will need to update the running server by clicking the button that appears. Clients can then access their profile at `https://<server-ip>:943/`. Users can log in and download the OS specific program, and OpenVPN profile. User's access can be revoked or modified in this area too.
 
 After creating a user and password, the setup is complete and you can connect locally. To connect from the internet, forward port 1194 through your router.
+
 ## Links
 
 [OpenVPN Access Server Downloads]("https://openvpn.net/index.php/access-server/overview.html")
