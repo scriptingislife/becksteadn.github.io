@@ -151,7 +151,7 @@ textarea:focus {
     
   <div>
       <div>
-  		<input id="saveForm" name="saveForm" type="submit" value="Submit">
+  		<input id="saveForm" type="submit" value="Submit">
     </div>
 	</div>
   
