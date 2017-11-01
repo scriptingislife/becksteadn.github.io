@@ -39,4 +39,4 @@ After creating a user and password, the setup is complete and you can connect lo
 
 ## Links
 
-[OpenVPN Access Server Downloads]("https://openvpn.net/index.php/access-server/overview.html")
+[OpenVPN Access Server Downloads](https://openvpn.net/index.php/access-server/overview.html)
