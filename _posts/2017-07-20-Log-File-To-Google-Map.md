@@ -33,8 +33,8 @@ This is very much a work in progress as being off campus and other projects have
 
 ### References
 
-[Log Mapper Github Page]("https://github.com/becksteadn/Log-Mapper)
+[Log Mapper Github Page](https://github.com/becksteadn/Log-Mapper)
 
-[gmplot Github Page]("https://github.com/vgm64/gmplot")
+[gmplot Github Page](https://github.com/vgm64/gmplot)
 
-[SPARSA Talk I Gave]("https://youtu.be/RA3FLQy3JPE?t=704")
+[SPARSA Talk I Gave](https://youtu.be/RA3FLQy3JPE?t=704)
