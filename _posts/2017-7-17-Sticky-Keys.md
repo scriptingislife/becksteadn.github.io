@@ -68,8 +68,8 @@ You're all set. The machine should be back to normal settings and you can make a
 
 # References
 
-[Rufus Download]("https://rufus.akeo.ie/)
+[Rufus Download](https://rufus.akeo.ie/)
 
-[Ubuntu Desktop Download]("https://www.ubuntu.com/download/desktop")
+[Ubuntu Desktop Download](https://www.ubuntu.com/download/desktop)
 
-[TechNet - Net User Command]("https://technet.microsoft.com/en-us/library/bb490718.aspx")
+[TechNet - Net User Command](https://technet.microsoft.com/en-us/library/bb490718.aspx)
