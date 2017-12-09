@@ -1,5 +1,6 @@
 ---
 published: false
+layout: post
 ---
 ## My Amazon Alexa Skills Environment
 
