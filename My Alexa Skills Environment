@@ -1,0 +1,27 @@
+---
+published: false
+layout: post
+---
+
+#Introduction
+
+I first got interested in the Alexa Skills Kit when I got a strip of LED lights for Christmas. Python is my go to language so I used the [Flask-Ask framework](https://developer.amazon.com/blogs/post/Tx14R0IYYGH3SKT/Flask-Ask-A-New-Python-Framework-for-Rapid-Alexa-Skills-Kit-Development) on a Raspberry Pi. The code was very basic, and the networking with [ngrok](https://ngrok.com/) was messy and the endpoint domain had to be changed in the skill's configuration every time my Raspberry Pi restarted.
+
+My first year of college, I made a skill with Flask-Ask that parsed RIT's News and Events Daily page for upcoming events and sports games. Again, I used ngrok because I wasn't aware of a better alternative. I could have paid $60 for a static subdomain, but an application that may never be used by another person was not worth that as a college student on a budget.
+
+Over the summer, I learned more about networking from my internship and homelab. I finally understand the concept of reverse proxies and was able to set one up for my lab. With Cloud9 now on AWS and AWS Education credits, I moved my code from a Raspberry Pi to an EC2 nano instance. After developing my latest skill, a client for r/ExplainLikeImFive, I feel as though I have a solid yet simple setup to develop Alexa skills using the Flask-Ask framework.
+
+#The Server
+With an overwhelming amount of AWS Educate credit, I wanted to test out Cloud9 on AWS. It's very simple to configure a new environment and get coding. To lower costs, I set the instance to turn off after 30 minutes of inactivity while developing. When it was being certified and published, I set it to never turn off. 
+
+#The Code
+
+#The Networking
+
+#For the Future
+After finals week, I want to set up Caddy and my Flask services to run on boot.
+
+#Resources
+[Explain Like I'm 5 Skill](https://skills-store.amazon.com/deeplink/dp/B077ZQWYX3?deviceType=app&share&refSuffix=ss_copy)
+[RIT Daily Skill](https://www.amazon.com/dp/B073NQ3T4S/?ref-suffix=ss_copy)
+
