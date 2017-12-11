@@ -4,8 +4,6 @@ layout: post
 title: My Alexa Skills Environment
 ---
 
-## Introduction
-
 I first became interested in the Alexa Skills Kit when I got a strip of LED lights for Christmas. Python is my go to language so I used the [Flask-Ask 
 framework](https://developer.amazon.com/blogs/post/Tx14R0IYYGH3SKT/Flask-Ask-A-New-Python-Framework-for-Rapid-Alexa-Skills-Kit-Development) on a Raspberry Pi to make them change colors, flash, etc. with my voice. The code was very basic, and the networking with [ngrok](https://ngrok.com/) was messy. The endpoint domain had to be changed in the skill's configuration every time ngrok was stopped or my Raspberry Pi restarted.
 
