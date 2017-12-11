@@ -6,9 +6,9 @@ title: My Alexa Skills Environment
 
 #Introduction
 
-I first got interested in the Alexa Skills Kit when I got a strip of LED lights for Christmas. Python is my go to language so I used the [Flask-Ask framework](https://developer.amazon.com/blogs/post/Tx14R0IYYGH3SKT/Flask-Ask-A-New-Python-Framework-for-Rapid-Alexa-Skills-Kit-Development) on a Raspberry Pi. The code was very basic, and the networking with [ngrok](https://ngrok.com/) was messy and the endpoint domain had to be changed in the skill's configuration every time my Raspberry Pi restarted.
+I first got interested in the Alexa Skills Kit when I got a strip of LED lights for Christmas. Python is my go to language so I used the [Flask-Ask framework](https://developer.amazon.com/blogs/post/Tx14R0IYYGH3SKT/Flask-Ask-A-New-Python-Framework-for-Rapid-Alexa-Skills-Kit-Development) on a Raspberry Pi to make them change colors, flash, etc. with my voice. The code was very basic, and the networking with [ngrok](https://ngrok.com/) was messy. The endpoint domain had to be changed in the skill's configuration every time ngrok was stopped or my Raspberry Pi restarted.
 
-My first year of college, I made a skill with Flask-Ask that parsed RIT's News and Events Daily page for upcoming events and sports games. Again, I used ngrok because I wasn't aware of a better alternative. I could have paid $60/year for a static subdomain, but an application that may never be used by another person was not worth that as a college student on a budget.
+My first year of college, I made a skill with Flask-Ask that parsed RIT's News and Events Daily page for upcoming events and sports games. Again, I used ngrok because I wasn't aware of a better alternative. I could have paid $60/year for a static ngrok subdomain, but an application that may never be used by another person was not worth that as a college student on a budget.
 
 Over the summer, I learned more about networking from my internship and homelab. I finally understand the concept of reverse proxies and was able to set one up for my lab. With Cloud9 now on AWS and AWS Education credits, I moved my code from a Raspberry Pi to an EC2 nano instance. After developing my latest skill, a client for r/ExplainLikeImFive, I feel as though I have a solid yet simple setup to develop Alexa skills using the Flask-Ask framework.
 
@@ -49,15 +49,13 @@ My skill domains are currently subdomains using [DuckDNS](https://www.duckdns.or
 
 After the Caddyfile has been configured, just run `caddy` in the same directory as the file. On the first run it will set up a Let's Encrypt certificate by verifying the DNS configuration and asking for an email address. Now, when a request for `myskill01.example.com` comes in over HTTPS on port 443, it will get the information from the Flask server on port 5000 over HTTP and then transport it back to the Echo device over HTTPS.
 
-![Serving Skills with Caddy]({{site.baseurl}}/skills-networking.png)
-
-
+![Serving Flask Skills with Caddy]({{site.baseurl}}/environment-networking.png)
 
 #For the Future
 
 After finals week, I want to set up Caddy and my Flask services to run on boot. Running commands with screen or tmux still require a manual start after the machine has booted. Running as services means there is no interaction to get them started if the server needs to be rebooted and they are easier to manage than a command in screen.
 
-Currently, only my ELI5 skill is running since the RIT skill needs to be updated to work. I'm excited to get it running again so I can have multiple skills running on one instance.
+Currently, only my ELI5 skill is running since the RIT skill needs to be updated to work. I'm excited to get it running again so I can have multiple skills on one instance.
 
 I'd like to write a more technical tutorial using this environment from start to finish with an example skill so that it's easier to see how all of the parts interact.
 
