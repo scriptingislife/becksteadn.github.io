@@ -15,7 +15,7 @@ Over the summer, I learned more about networking from my internship and homelab.
 
 With an overwhelming amount of AWS Educate credit, I wanted to test out Cloud9 on AWS. It's very simple to configure a new environment and get coding. To lower costs, I set the instance to turn off after 30 minutes of inactivity while developing. Now that it is certified and published, I set it to never turn off.
 
-![Create a Cloud9 Environment]({{site.baseurl}}/images/environment-create.png)
+![Create a Cloud9 Environment]({{site.baseurl}}/images/My-Alexa-Skills-Environment/environment-create.png)
 
 
 Other IAM users can be invited to the environment to read and write or just read, allowing for review and development by a group. Another great thing about Cloud9 is the ability to attach to an existing server through SSH keys. If you already have code on another AWS instance or server, you can interface with it through Cloud9 in your browser.
@@ -30,7 +30,7 @@ Almost all of my skills have a front end and back end. The front end interfaces 
 
 The code is run inside a terminal using screen so that no Cloud9 windows needs to remain open. Flask automatically detects a change in any file it uses and updates so the process never needs to be restarted manually.
 
-![Cloud9 Code]({{site.baseurl}}/images/skill-code.png)
+![Cloud9 Code]({{site.baseurl}}/images/images/My-Alexa-Skills-Environment/skill-code.png)
 
 ## The Networking
 
@@ -48,7 +48,7 @@ My skill domains are currently subdomains using [DuckDNS](https://www.duckdns.or
 
 After the Caddyfile has been configured, just run `caddy` in the same directory as the file. On the first run it will set up a Let's Encrypt certificate by verifying the DNS configuration and asking for an email address. Now, when a request for `myskill01.example.com` comes in over HTTPS on port 443, it will get the information from the Flask server on port 5000 over HTTP and then transport it back to the Echo device over HTTPS.
 
-![Serving Flask Skills with Caddy]({{site.baseurl}}/images/environment-networking.png)
+![Serving Flask Skills with Caddy]({{site.baseurl}}/images/images/My-Alexa-Skills-Environment/environment-networking.png)
 
 ## For the Future
 
