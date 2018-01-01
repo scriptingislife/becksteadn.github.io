@@ -44,7 +44,7 @@ sudo yum update
 sudo yum install python-pip python-wheel python-setuptools
 ```
 
-#### Write The Code
+#### Required Files
 
 The Cloud9 environment starts in ~/environment . Create a folder called MemoryGame.
 
@@ -125,4 +125,50 @@ These two files are all that's needed to run the Memory Game skill. The Flask se
 python memory\_game.py
 ```
 
-The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=my\_num)`.
+The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=my\_num)`. The host does not need to be changed because the Flask server will not be connecting to anything other than localhost.
+
+## The Networking
+
+#### Endpoint
+
+For long-term skills, a DNS name is highly recommended over an IP address. Unless configured otherwise, EC2 instance IP addresses will not stay the same. A dynamic DNS (DDNS) name is ideal.
+
+[DuckDNS](https://www.duckdns.org/) is just one provider that provides this service for free. There are a variety of sign-in options. Choose your preferred method. Add a new domain by simply entering the desired subdomain. You will need a subdomain for each skill you develop.
+
+Follow the [installation instructions](https://www.duckdns.org/install.jsp) for linux-cron. In summary:
+
+```
+1. Make a new folder for the update script
+
+mkdir ~/duckdns
+
+2. Create and edit the update script
+
+touch duck.sh
+
+3. Add the single line
+
+echo url="https://www.duckdns.org/update?domains=MYFULLDOMAIN&token=MYGIVENTOKEN&ip=" | curl -k -o ~/duckdns/duck.log -K -
+
+4. Make the script executable by the owner
+
+chmod 700 duck.sh
+
+5. Create a cronjob to run the script every 5 minutes
+
+crontab -e
+
+\*/5 \* \* \* \* ~/duckdns/duck.sh >/dev/null 2>&1
+
+6. Test the script
+
+./duck.sh
+
+7. Check duckdns.org to see if the IP has been updated.
+```
+
+Alexa Skills not in a Lambda function are required to have an HTTPS certificate. Flask is not meant to be a full web server and therefore does not have easy HTTPS support.
+
+#### Reverse Proxy
+
+[Caddy](https://caddyserver.com/)is a dead simple reverse proxy full of additional features. Another proxy such as NGINX can be used if desired. The same principles still apply.
