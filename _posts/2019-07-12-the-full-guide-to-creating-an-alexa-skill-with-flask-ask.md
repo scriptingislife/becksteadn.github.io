@@ -57,53 +57,53 @@ import logging
 
 from random import randint
 
-from flask import Flask, render\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_template
+from flask import Flask, render\_template
 
-from flask\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_ask import Ask, statement, question, session
+from flask\_ask import Ask, statement, question, session
 
-app = Flask(\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_name\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_)
+app = Flask(\_\_name\_\_)
 
 ask = Ask(app, "/")
 
-logging.getLogger("flask\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_ask").setLevel(logging.DEBUG)
+logging.getLogger("flask\_ask").setLevel(logging.DEBUG)
 
 @ask.launch
 
-def new\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_game():
+def new\_game():
 
-    welcome\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_msg = render\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_template('welcome')
+    welcome\_msg = render\_template('welcome')
 
-    return question(welcome\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_msg)
+    return question(welcome\_msg)
 
 @ask.intent("YesIntent")
 
-def next\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_round():
+def next\_round():
 
-    numbers = [randint(0, 9) for \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_ in range(3)]
+    numbers = [randint(0, 9) for \_ in range(3)]
 
-    round\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_msg = render\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_template('round', numbers=numbers)
+    round\_msg = render\_template('round', numbers=numbers)
 
     session.attributes['numbers'] = numbers[::-1]  # reverse
 
-    return question(round\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_msg)
+    return question(round\_msg)
 
 @ask.intent("AnswerIntent", convert={'first': int, 'second': int, 'third': int})
 
 def answer(first, second, third):
 
-    winning\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_numbers = session.attributes['numbers']
+    winning\_numbers = session.attributes['numbers']
 
-    if [first, second, third] == winning\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_numbers:
+    if [first, second, third] == winning\_numbers:
 
-        msg = render\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_template('win')
+        msg = render\_template('win')
 
     else:
 
-        msg = render\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_template('lose')
+        msg = render\_template('lose')
 
     return statement(msg)
 
-if '\\\\\\\\\\\\\\\_\\\\\\\\\\\\\\\_name\\\\\\\\\\\\\\\_\\\\\\\\\\\\\\\_' == '\\\\\\\\\\\\\\\_\\\\\\\\\\\\\\\_main\\\\\\\\\\\\\\\_\\\\\\\\\\\\\\\_':
+if \_\_name\_\_ == '\_\_main\_\_':
 
     app.run(debug=True)
 ```
