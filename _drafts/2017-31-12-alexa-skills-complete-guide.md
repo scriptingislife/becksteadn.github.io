@@ -50,7 +50,7 @@ The Cloud9 environment starts in ~/environment . Create a folder called MemoryGa
 
 &nbsp;
 
-&nbsp;Add a file named&nbsp;**memory\_game.py**by using the `touch` command, the graphical `File -&gt; New File`,option,&nbsp; or keyboard shortcut `Alt+N`. The file explorer is in the lefthand panel of Cloud9. Double click the file to open it in the editor and add the following code.
+&nbsp;Add a file named&nbsp;**memory\_game.py**by using the `touch` command, the graphical `File -&gt; New File` option, or the keyboard shortcut `Alt+N`. The file explorer is in the lefthand panel of Cloud9. Double click the file to open it in the editor and add the following code.
 
 ```
 import logging
