@@ -1,7 +1,7 @@
 ---
 published: false
 layout: post
-title: The Full Guide to Making an Alexa Skill with Flask-Ask
+title: The Full Guide to Creating an Alexa Skill with Flask-Ask
 ---
 
 
@@ -189,6 +189,8 @@ To start Caddy, simply run the "caddy" command with no arguments in the same dir
 
 Head to your [list of skills](https://developer.amazon.com/edw/home.html#/skills/list), log in to your Amazon account, use the Alexa Skills Kit. Click&nbsp;**Add a New Skill&nbsp;**in the upper right to start a fresh configuration.
 
+Note: This section may refer to an older version of the skill creator as Amazon is currently testing a new beta version.
+
 ##### Skill Information
 
 The default skill type Custom Interaction Model is what the memory game uses. Give it a name and invocation name of "memory game".
@@ -253,6 +255,22 @@ AnswerIntent {first} {second} and {third}
 
 ##### Configuration
 
+Select HTTPS instead of a Lambda function and enter the DNS subdomain for the skill. All other options can be ignored.
+
+##### SSL Certificate
+
+Caddy's Let's Encrypt certificates are trusted by Amazon so select "My development endpoint has a certificate from a trusted certificate authority".
+
+##### Test
+
+Enable testing. Start caddy and the memory game in Cloud9 then try out different phrases. Make sure it is able to reach the endpoint and get a response.<br><br>Use [echosim.io](https://echosim.io/welcome)&nbsp;or a real Echo device to test the skill. The skill should already be enabled on your account, but if it is not say "Alexa, enable Memory Game".
+
+## Running Services
+
+Caddy and Flask both run in the foreground by default by typing a command. That means Caddy and each skill needs its own shell to run.&nbsp;
+
 ### Resources
 
 [Amazon Flask-Ask Introduction](https://developer.amazon.com/blogs/post/Tx14R0IYYGH3SKT/Flask-Ask-A-New-Python-Framework-for-Rapid-Alexa-Skills-Kit-Development)
+
+[Flask-Ask Documentation](https://alexatutorial.com/flask-ask/)
