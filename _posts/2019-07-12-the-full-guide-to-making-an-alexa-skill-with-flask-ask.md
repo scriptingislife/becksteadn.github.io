@@ -57,53 +57,53 @@ import logging
 
 from random import randint
 
-from flask import Flask, render\\\\\\\_template
+from flask import Flask, render\\\\\\\\\\\\\\\_template
 
-from flask\\\\\\\_ask import Ask, statement, question, session
+from flask\\\\\\\\\\\\\\\_ask import Ask, statement, question, session
 
-app = Flask(\\\\\\\_\\\\\\\_name\\\\\\\_\\\\\\\_)
+app = Flask(\\\\\\\\\\\\\\\_\\\\\\\\\\\\\\\_name\\\\\\\\\\\\\\\_\\\\\\\\\\\\\\\_)
 
 ask = Ask(app, "/")
 
-logging.getLogger("flask\\\\\\\_ask").setLevel(logging.DEBUG)
+logging.getLogger("flask\\\\\\\\\\\\\\\_ask").setLevel(logging.DEBUG)
 
 @ask.launch
 
-def new\\\\\\\_game():
+def new\\\\\\\\\\\\\\\_game():
 
-    welcome\\\\\\\_msg = render\\\\\\\_template('welcome')
+    welcome\\\\\\\\\\\\\\\_msg = render\\\\\\\\\\\\\\\_template('welcome')
 
-    return question(welcome\\\\\\\_msg)
+    return question(welcome\\\\\\\\\\\\\\\_msg)
 
 @ask.intent("YesIntent")
 
-def next\\\\\\\_round():
+def next\\\\\\\\\\\\\\\_round():
 
-    numbers = [randint(0, 9) for \\\\\\\_ in range(3)]
+    numbers = [randint(0, 9) for \\\\\\\\\\\\\\\_ in range(3)]
 
-    round\\\\\\\_msg = render\\\\\\\_template('round', numbers=numbers)
+    round\\\\\\\\\\\\\\\_msg = render\\\\\\\\\\\\\\\_template('round', numbers=numbers)
 
     session.attributes['numbers'] = numbers[::-1]  # reverse
 
-    return question(round\\\\\\\_msg)
+    return question(round\\\\\\\\\\\\\\\_msg)
 
 @ask.intent("AnswerIntent", convert={'first': int, 'second': int, 'third': int})
 
 def answer(first, second, third):
 
-    winning\\\\\\\_numbers = session.attributes['numbers']
+    winning\\\\\\\\\\\\\\\_numbers = session.attributes['numbers']
 
-    if [first, second, third] == winning\\\\\\\_numbers:
+    if [first, second, third] == winning\\\\\\\\\\\\\\\_numbers:
 
-        msg = render\\\\\\\_template('win')
+        msg = render\\\\\\\\\\\\\\\_template('win')
 
     else:
 
-        msg = render\\\\\\\_template('lose')
+        msg = render\\\\\\\\\\\\\\\_template('lose')
 
     return statement(msg)
 
-if '\\\_\\\_name\\\_\\\_' == '\\\_\\\_main\\\_\\\_':
+if '\\\\\\\_\\\\\\\_name\\\\\\\_\\\\\\\_' == '\\\\\\\_\\\\\\\_main\\\\\\\_\\\\\\\_':
 
     app.run(debug=True)
 ```
@@ -122,10 +122,10 @@ lose: Sorry, that's the wrong answer.
 These two files are all that's needed to run the Memory Game skill. The Flask server can now be started using the command
 
 ```
-python memory\\\_game.py
+python memory\\\\\\\_game.py
 ```
 
-The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=my\\\_num)`. The host does not need to be changed because the Flask server will not be connecting to anything other than localhost.
+The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=my\\\\\\\_num)`. The host does not need to be changed because the Flask server will not be connecting to anything other than localhost.
 
 ## The Networking
 
@@ -158,7 +158,7 @@ chmod 700 duck.sh
 
 crontab -e
 
-\\\*/5 \\\* \\\* \\\* \\\* ~/duckdns/duck.sh >/dev/null 2>&1
+\\\\\\\*/5 \\\\\\\* \\\\\\\* \\\\\\\* \\\\\\\* ~/duckdns/duck.sh >/dev/null 2>&1
 
 6. Test the script
 
@@ -171,7 +171,7 @@ Alexa Skills not in a Lambda function are required to have an HTTPS certificate.
 
 #### Reverse Proxy
 
-[Caddy](https://caddyserver.com/)&nbsp;is a dead simple reverse proxy full of additional features. Another proxy such as NGINX can be used if desired. The same principles still apply. This proxy will do all of the HTTPS encryption as well as fetch data from each skill's Flask server so that multiple skills can be hosted on the same instance on port 443. As an added bonus, Caddy automatically creates Let's Encrypt certificates for your domain.<br><br>To install Caddy in one step using bash, run "curl https://getcaddy.com | bash -s personal".
+| [Caddy](https://caddyserver.com/)&nbsp;is a dead simple reverse proxy full of additional features. Another proxy such as NGINX can be used if desired. The same principles still apply. This proxy will do all of the HTTPS encryption as well as fetch data from each skill's Flask server so that multiple skills can be hosted on the same instance on port 443. As an added bonus, Caddy automatically creates Let's Encrypt certificates for your domain.<br><br>To install Caddy in one step using bash, run "curl https://getcaddy.com | bash -s personal". |
 
 Caddy uses a default configuration file named&nbsp;**Caddyfile**. Here is a basic configuration for a single domain with a default Flask server running.
 
@@ -187,6 +187,72 @@ To start Caddy, simply run the "caddy" command with no arguments in the same dir
 
 ### Skill Configuration
 
-Head to your [list of skills](https://developer.amazon.com/edw/home.html#/skills/list), log in to your Amazon account, use the Alexa Skills Kit. Click&nbsp;**Add a New Skill&nbsp;**in the upper right to start a fresh configuration. The default skill type Custom Interaction Model is what the memory game uses. Give it a name and invocation name of "memory game".
+Head to your [list of skills](https://developer.amazon.com/edw/home.html#/skills/list), log in to your Amazon account, use the Alexa Skills Kit. Click&nbsp;**Add a New Skill&nbsp;**in the upper right to start a fresh configuration.
 
-The interaction model is how Alexa decides what information to send your skill. The intent schema defines intents and slots.&nbsp;
+##### Skill Information
+
+The default skill type Custom Interaction Model is what the memory game uses. Give it a name and invocation name of "memory game".
+
+##### Interaction Model
+
+The interaction model is how Alexa decides what information to send your skill. The intent schema defines intents and slots. Intents are a single conclusion Amazon makes based on the voice input. For example, saying "stop", "stop it", and "terminate" can all probably be grouped into the AMAZON.StopIntent intent. This makes it easy for developers to program logic for a single case and leave the voice processing for Amazon.
+
+In the **Intent Schema** field add:
+
+```
+{
+
+    "intents": [{
+
+        "intent": "YesIntent"
+
+    }, {
+
+        "intent": "AnswerIntent",
+
+        "slots": [{
+
+            "name": "first",
+
+            "type": "AMAZON.NUMBER"
+
+        }, {
+
+            "name": "second",
+
+            "type": "AMAZON.NUMBER"
+
+        }, {
+
+            "name": "third",
+
+            "type": "AMAZON.NUMBER"
+
+        }]
+
+    }]
+
+}
+```
+
+Slot are variables that the user says and can then be used in your program. Again, the developer defines the model of how slots should fit into a phrase, but does not directly parse anything. In this case, the slots are the first, second, and third numbers the user says. Slots are already figured out before it hits your program. They are then defined in the "convert={var: type}" argument to make usable variables in the function.
+
+Custom Slot Types are used to define categories of input that are not grouped in Amazon's intents. They do not need to be used for the memory game. I used a custom slot in my Explain Like I'm Five skill to give example questions because those were the only kinds of input I wanted to program for.
+
+Example phrases help Alexa learn if a phrase is relevant to the skill. This is also where slots locations are defined. For the memory game, use these example phrases or try out your own.
+
+```
+YesIntent yes
+
+YesIntent sure
+
+AnswerIntent {first} {second} {third}
+
+AnswerIntent {first} {second} and {third}
+```
+
+##### Configuration
+
+### Resources
+
+[Amazon Flask-Ask Introduction](https://developer.amazon.com/blogs/post/Tx14R0IYYGH3SKT/Flask-Ask-A-New-Python-Framework-for-Rapid-Alexa-Skills-Kit-Development)
