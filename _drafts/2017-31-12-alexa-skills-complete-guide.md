@@ -125,4 +125,4 @@ These two files are all that's needed to run the Memory Game skill. The Flask se
 python memory\_game.py
 ```
 
-The server listens on http://127.0.0.1:5000 by default but can be changing the line in **memory\_game.py** to **app.run(debug=True, port=my\_num)**.
+The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=my\_num)`.
