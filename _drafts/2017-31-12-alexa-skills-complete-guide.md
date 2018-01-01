@@ -185,4 +185,8 @@ That's it. The top line is the DDNS name we created before. The next line simply
 
 To start Caddy, simply run the "caddy" command with no arguments in the same directory as the configuration file.
 
-&nbsp;
+### Skill Configuration
+
+Head to your [list of skills](https://developer.amazon.com/edw/home.html#/skills/list), log in to your Amazon account, use the Alexa Skills Kit. Click&nbsp;**Add a New Skill&nbsp;**in the upper right to start a fresh configuration. The default skill type Custom Interaction Model is what the memory game uses. Give it a name and invocation name of "memory game".
+
+The interaction model is how Alexa decides what information to send your skill. The intent schema defines intents and slots.&nbsp;
