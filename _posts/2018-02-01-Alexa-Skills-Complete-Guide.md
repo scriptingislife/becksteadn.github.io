@@ -350,7 +350,7 @@ exit 0
 
 There are two things the service requires since it manages a Python appication. If the skill uses relative paths, the script needs to change directories to where the skill is located. The skill should also be run as the ec2-user rather than root using the `sudo -u` command.
 
-```
+<pre>
 #!/bin/bash
 #description: Memory Game Flask-Ask Server
 
@@ -360,10 +360,10 @@ There are two things the service requires since it manages a Python appication. 
 #Start the service
 start() {
         echo -n "Starting Memory Game Flask-Ask server" | logger
-        cd /home/ec2-user/environment/**MemoryGame**/
-        sudo -u ec2-user python3 **memory_game**.py &
+        cd /home/ec2-user/environment/<b>MemoryGame</b>/
+        sudo -u ec2-user python3 <b>memory_game</b>.py &
         ### Create the lock file ###
-        touch /var/lock/subsys/**memorygame**
+        touch /var/lock/subsys/<b>memorygame</b>
         success $"Memory Game Flask-Ask server startup"
         echo
 }
@@ -371,9 +371,9 @@ start() {
 # Restart the service
 stop() {
         echo -n "Starting Memory Game Flask-Ask server" | logger
-        killproc **memorygame**
+        killproc <b>memorygame</b>
         ### Now, delete the lock file ###
-        rm -f /var/lock/subsys/**memorygame**
+        rm -f /var/lock/subsys/<b>memorygame</b>
         echo
 }
 
@@ -392,7 +392,7 @@ case "$1" in
         stop
         ;;
   status)
-        status **memorygame**
+        status <b>memorygame</b>
         ;;
   restart|reload|condrestart)
         stop
@@ -404,7 +404,7 @@ case "$1" in
 esac
 
 exit 0
-```
+</pre>
 
 This system uses linked files (think shortcuts) to organize init scripts. The `/etc/rc*.d/` directories specify certain runlevels which are modes of operation for the operating system. You can read more about them on the [Wikipedia page](https://en.wikipedia.org/wiki/Runlevel).
 
