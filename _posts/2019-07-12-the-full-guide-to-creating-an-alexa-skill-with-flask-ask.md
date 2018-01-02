@@ -57,53 +57,53 @@ import logging
 
 from random import randint
 
-from flask import Flask, render\\\_template
+from flask import Flask, render\\\\\\\_template
 
-from flask\\\_ask import Ask, statement, question, session
+from flask\\\\\\\_ask import Ask, statement, question, session
 
-app = Flask(\\\_\\\_name\\\_\\\_)
+app = Flask(\\\\\\\_\\\\\\\_name\\\\\\\_\\\\\\\_)
 
 ask = Ask(app, "/")
 
-logging.getLogger("flask\\\_ask").setLevel(logging.DEBUG)
+logging.getLogger("flask\\\\\\\_ask").setLevel(logging.DEBUG)
 
 @ask.launch
 
-def new\\\_game():
+def new\\\\\\\_game():
 
-    welcome\\\_msg = render\\\_template('welcome')
+    welcome\\\\\\\_msg = render\\\\\\\_template('welcome')
 
-    return question(welcome\\\_msg)
+    return question(welcome\\\\\\\_msg)
 
 @ask.intent("YesIntent")
 
-def next\\\_round():
+def next\\\\\\\_round():
 
-    numbers = [randint(0, 9) for \\\_ in range(3)]
+    numbers = [randint(0, 9) for \\\\\\\_ in range(3)]
 
-    round\\\_msg = render\\\_template('round', numbers=numbers)
+    round\\\\\\\_msg = render\\\\\\\_template('round', numbers=numbers)
 
     session.attributes['numbers'] = numbers[::-1]  # reverse
 
-    return question(round\\\_msg)
+    return question(round\\\\\\\_msg)
 
 @ask.intent("AnswerIntent", convert={'first': int, 'second': int, 'third': int})
 
 def answer(first, second, third):
 
-    winning\\\_numbers = session.attributes['numbers']
+    winning\\\\\\\_numbers = session.attributes['numbers']
 
-    if [first, second, third] == winning\\\_numbers:
+    if [first, second, third] == winning\\\\\\\_numbers:
 
-        msg = render\\\_template('win')
+        msg = render\\\\\\\_template('win')
 
     else:
 
-        msg = render\\\_template('lose')
+        msg = render\\\\\\\_template('lose')
 
     return statement(msg)
 
-if \\\_\\\_name\\\_\\\_ == '\\\_\\\_main\\\_\\\_':
+if \\\\\\\_\\\\\\\_name\\\\\\\_\\\\\\\_ == '\\\\\\\_\\\\\\\_main\\\\\\\_\\\\\\\_':
 
     app.run(debug=True)
 ```
@@ -122,10 +122,10 @@ lose: Sorry, that's the wrong answer.
 These two files are all that's needed to run the Memory Game skill. The Flask server can now be started using the command
 
 ```
-python memory\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_game.py
+python memory\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_game.py
 ```
 
-The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=my\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_num)`. The host does not need to be changed because the Flask server will not be connecting to anything other than localhost.
+The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=my\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_num)`. The host does not need to be changed because the Flask server will not be connecting to anything other than localhost.
 
 ## The Networking
 
@@ -158,7 +158,7 @@ chmod 700 duck.sh
 
 crontab -e
 
-\*/5 \* \* \* \* ~/duckdns/duck.sh >/dev/null 2>&1
+\\\*/5 \\\* \\\* \\\* \\\* ~/duckdns/duck.sh >/dev/null 2>&1
 
 6. Test the script
 
@@ -281,7 +281,128 @@ Make a directory called&nbsp;**services&nbsp;**in ~/environment.&nbsp;
 
 ##### Init Script
 
-&nbsp;
+The System V init script is adapted from [this post](https://www.cyberciti.biz/tips/linux-write-sys-v-init-script-to-start-stop-service.html)&nbsp;on the topic. The Caddy service will be slightly different from the Flask-Ask&nbsp; services but will have roughly the same format.
+
+###### Caddy Service
+
+First, I moved the Caddyfile to a neutral place such as "/usr/local/files/Caddyfile" so that the service can easily reach it.
+
+```
+#!/bin/bash
+#description: Caddy reverse proxy for Amazon Alexa Skills
+
+# Get function from functions library
+. /etc/init.d/functions
+
+#Start the service
+start() {
+        echo -n "Starting Caddy Reverse Proxy server" | logger
+        /usr/local/bin/caddy -conf /usr/local/files/Caddyfile &
+        ### Create the lock file ###
+        touch /var/lock/subsys/caddyd
+        success $"Caddy Reverse Proxy server startup"
+        echo
+}
+
+# Restart the service
+stop() {
+        echo -n "Stopping Caddy Reverse Proxy server" | logger
+        killproc caddyd
+        ### Now, delete the lock file ###
+        rm -f /var/lock/subsys/caddyd
+        echo
+}
+
+#!/bin/bash
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root"
+   exit 1
+fi
+
+### main logic ###
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        status caddyd
+        ;;
+  restart|reload|condrestart)
+        stop
+        start
+        ;;
+  \*)
+        echo $"Usage: $0 {start|stop|restart|reload|status}"
+        exit 1
+esac
+
+exit 0
+```
+
+###### Memory Game Service
+
+There are two things the service requires since it manages a Python appication. If the skill uses relative paths, the script needs to change directories to where the skill is located. The skill should also be run as the ec2-user rather than root using the "sudo -u" command.
+
+```
+#!/bin/bash
+#description: Memory Game Flask-Ask Server
+
+# Get function from functions library
+. /etc/init.d/functions
+
+#Start the service
+start() {
+        echo -n "Starting Memory Game Flask-Ask server" | logger
+        cd /home/ec2-user/environment/**MemoryGame**/
+        sudo -u ec2-user python3 **memory\_game**.py &
+        ### Create the lock file ###
+        touch /var/lock/subsys/**memorygame**
+        success $"Memory Game Flask-Ask server startup"
+        echo
+}
+
+# Restart the service
+stop() {
+        echo -n "Starting Memory Game Flask-Ask server" | logger
+        killproc **memorygame**
+        ### Now, delete the lock file ###
+        rm -f /var/lock/subsys/**memorygame**
+        echo
+}
+
+#!/bin/bash
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root"
+   exit 1
+fi
+
+### main logic ###
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        status **memorygame**
+        ;;
+  restart|reload|condrestart)
+        stop
+        start
+        ;;
+  \*)
+        echo $"Usage: $0 {start|stop|restart|reload|status}"
+        exit 1
+esac
+
+exit 0
+```
+
+This system uses linked files (think shortcuts)&nbsp;
 
 ### Resources
 
