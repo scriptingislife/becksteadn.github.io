@@ -402,7 +402,21 @@ esac
 exit 0
 ```
 
-This system uses linked files (think shortcuts)&nbsp;
+This system uses linked files (think shortcuts) to organize init scripts. The "/etc/rc\*.d/" directories specify certain runlevels which are modes of operation for the operating system. You can read more about them on the [Wikipedia page](https://en.wikipedia.org/wiki/Runlevel).
+
+If you run "ls -l /etc/rc3.d/" you will see all of the files point to a script in "/etc/init.d/".
+
+![](/uploads/versions/rc3d-files---x----604-213x---.png)Instead of copying the files, we'll create a symbolic link in the /etc/init.d/ directory and then another link to the /etc/rc3.d/ directory which is the normal operation runlevel.
+
+```
+sudo ln -s ~/environment/services/memorygame /etc/init.d/
+```
+
+```
+sudo ln -s /etc/init.d/memorygame /etc/rc3.d/
+```
+
+Now, make sure your services aren't sunning elsewhere and run /etc/init.d/memorygame start. Check /var/log/messages for the script's output. Flask's output will show in the terminal, but press Enter to reach the commandline again.
 
 ### Resources
 
