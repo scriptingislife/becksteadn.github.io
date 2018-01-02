@@ -13,7 +13,9 @@ I chose to develop the code using Amazon's Cloud9 service because it integrates 
 
 #### Create a New Cloud9 Environment
 
-After clicking&nbsp;**Create Environment&nbsp;**give it a name and description. If you have a server you want to develop and/or host on, specify the user and host then add their public key to the authorized\_keys file. Otherwise, create a new EC2 Instance. The default t2.micro type should be fine for only hosting several skills. The cost-saving setting is useful during development, but is not necessary with the large amount of credit Amazon offers. Review your settings and start the instance.
+After clicking&nbsp;**Create Environment&nbsp;**give it a name and description. If you have a server you want to develop and/or host on, specify the user and host then add their public key to the authorized\_keys file. Otherwise, create a new EC2 Instance. The default t2.micro type should be fine for only hosting several skills. The cost-saving setting is useful during development, but is not necessary with the large amount of credit Amazon offers and low cost of a t2.micro instance. When your skills are in production, turn cost-saving off.
+
+Review your settings and start the instance.
 
 ![](/uploads/versions/environment-details---x----749-762x---.png)
 
@@ -125,7 +127,7 @@ These two files are all that's needed to run the Memory Game skill. The Flask se
 python memory\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_game.py
 ```
 
-The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=my\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_num)`. The host does not need to be changed because the Flask server will not be connecting to anything other than localhost.
+The server listens on `http://127.0.0.1:5000` by default but can be changing the line in **memory\_game.py** to `app.run(debug=True, port=**port**)`. The host does not need to be changed because the Flask server will not be connecting to anything other than localhost.
 
 ## The Networking
 
@@ -148,7 +150,7 @@ touch duck.sh
 
 3. Add the single line
 
-echo url="https://www.duckdns.org/update?domains=MYFULLDOMAIN&token=MYGIVENTOKEN&ip=" | curl -k -o ~/duckdns/duck.log -K -
+echo url="https://www.duckdns.org/update?domains=**MYFULLDOMAIN**&token=**MYGIVENTOKEN**&ip=" | curl -k -o ~/duckdns/duck.log -K -
 
 4. Make the script executable by the owner
 
@@ -416,7 +418,13 @@ sudo ln -s ~/environment/services/memorygame /etc/init.d/
 sudo ln -s /etc/init.d/memorygame /etc/rc3.d/
 ```
 
-Now, make sure your services aren't sunning elsewhere and run /etc/init.d/memorygame start. Check /var/log/messages for the script's output. Flask's output will show in the terminal, but press Enter to reach the commandline again. Restart the host to make sure everything has been properly configured.
+Now, make sure your services aren't running elsewhere and run /etc/init.d/memorygame start. Check /var/log/messages for the script's output. Flask's output will show in the terminal, but press Enter to reach the commandline again. Restart the host to make sure everything has been properly configured.
+
+Unline ngrok, nothing needs to be changed in the skill configuration after restarting since the DuckDNS name stays the same.
+
+### Conclusion
+
+You should now have a skill that runs automatically when the EC2 instance boots. When the environment is configured for one skill, it's easy to add more and host them all on the same server.
 
 ### Resources
 
