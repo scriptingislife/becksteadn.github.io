@@ -30,7 +30,7 @@ Almost all of my skills have a front end and back end. The front end interfaces 
 
 The code is run inside a terminal using screen so that no Cloud9 windows needs to remain open. Flask automatically detects a change in any file it uses and updates so the process never needs to be restarted manually.
 
-![Cloud9 Code]({{site.baseurl}}/images/images/My-Alexa-Skills-Environment/skill-code.png)
+![Cloud9 Code]({{site.baseurl}}/images/My-Alexa-Skills-Environment/skill-code.png)
 
 ## The Networking
 
@@ -48,7 +48,7 @@ My skill domains are currently subdomains using [DuckDNS](https://www.duckdns.or
 
 After the Caddyfile has been configured, just run `caddy` in the same directory as the file. On the first run it will set up a Let's Encrypt certificate by verifying the DNS configuration and asking for an email address. Now, when a request for `myskill01.example.com` comes in over HTTPS on port 443, it will get the information from the Flask server on port 5000 over HTTP and then transport it back to the Echo device over HTTPS.
 
-![Serving Flask Skills with Caddy]({{site.baseurl}}/images/images/My-Alexa-Skills-Environment/environment-networking.png)
+![Serving Flask Skills with Caddy]({{site.baseurl}}/images/My-Alexa-Skills-Environment/environment-networking.png)
 
 ## For the Future
 
