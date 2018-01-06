@@ -424,7 +424,8 @@ sudo ln -s /etc/init.d/memorygame /etc/rc3.d/
 
 Now, make sure your services aren't running elsewhere and run `/etc/init.d/memorygame` start. Check `/var/log/messages` for the script's output. Flask's output will show in the terminal, but press Enter to reach the commandline again. Restart the host to make sure everything has been properly configured.
 
-Unline ngrok, nothing needs to be changed in the skill configuration after restarting since the DuckDNS name stays the same.
+Unlike ngrok, nothing needs to be changed in the skill configuration after restarting since the DuckDNS name stays the same.
+
 
 ### Conclusion
 
