@@ -1,8 +1,7 @@
 ---
 layout: default
+title: Miscellaneous Resources
 ---
-
-# Miscellaneous Resources
 
 ### Presentation Slides
 
