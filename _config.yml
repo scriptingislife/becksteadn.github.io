@@ -16,6 +16,9 @@ avatar: /images/profile.png
 # Flags below are optional
 #
 
+# Break posts up into different pages.
+paginate: 5
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
@@ -35,7 +38,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus:
+disqus: becksteadn-blog.disqus.com
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-90662247-1
@@ -74,10 +77,10 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-
+  - jekyll-paginate # Break pages up
 # Exclude these files from your production _site
 exclude:
   - Gemfile
