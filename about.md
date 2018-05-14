@@ -10,7 +10,7 @@ I am a computing security student at Rochester Institute of Technology. I write 
 ### Activities
 - Member of RIT Competitive Cybersecurity Club (RC3)
 - Member of Security Practices and Research Student Association (SPARSA)
-- Team Captain, RC3's IRSEC, Spring 2017, 2nd Place
+- Competitor, RC3's IRSeC, Spring 2017/2018, 2nd Place
 - White Team, SPARSA's Information Security Talent Search (ISTS), Spring 2017/2018
 - Blue Team, UB Network Defense's Lockdown v3, Fall 2017
 
