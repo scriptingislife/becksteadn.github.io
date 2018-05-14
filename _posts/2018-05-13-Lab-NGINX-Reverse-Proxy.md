@@ -14,7 +14,7 @@ A proxy takes requests from one computer and forwards them on to another, someti
 
 ## Why use a reverse proxy?
 
-Companies with popular services are able to use load balancing to ensure speed and availabily. I want to use it in conjuction with a VPN as a proxy to other services that are normally firewalled off and can't be reached directly. I also want to experiment with TLS termination so that I can have public facing web interfaces that are encrypted.
+Companies with popular services are able to use load balancing to ensure speed and availability. I want to use it in conjuction with a VPN as a proxy to other services that are normally firewalled off and can't be reached directly. I also want to experiment with TLS termination so that I can have public facing web interfaces that are encrypted.
 
 ## VPN Connection
 
