@@ -93,7 +93,11 @@ server {
 }                                                 
 ```
 
-This configuration is very similar to a TCP stream. NGINX listens on port 8080 and forwards traffic to `web.lan.scriptingis.life`. There are two HTTP specific directives however. `server_name` gives NGINX the domain names a server block is responsible for. For example, this server only responds when the HTTP Host header is `proxy.lan.scriptingis.life`. The `location` section is like `server_name` but for the file path section in the URL. For example, all images can be located separate from HTML and CSS files. These fields also support regular expressions.  
+This configuration is very similar to a TCP stream. NGINX listens on port 8080 and forwards traffic to `web.lan.scriptingis.life`. There are two HTTP specific directives however. `server_name` gives NGINX the domain names a server block is responsible for. For example, this server only responds when the HTTP Host header is `proxy.lan.scriptingis.life`. The `location` section is like `server_name` but for the file path section in the URL. For example, all images can be located separate from HTML and CSS files. These fields also support regular expressions.
+
+### DNS Configuration
+
+If you're using subdomains to distinguish servers, a wildcard A record using `*` pointing to the proxy IP will make life easier. 
 
 ## Conclusion
 
