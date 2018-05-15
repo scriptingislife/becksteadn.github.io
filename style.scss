@@ -19,9 +19,9 @@ html {
 
 body {
 	background: $white;
-  background-image:url(images/ep_naturalwhite.png);
+  background-image:url(images/ep_naturalblack.png);
   font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  color: $white;
   font-family: Lato;
 }
 
@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: $white;
   font-weight: bold;
 
   line-height: 1.7;
@@ -71,11 +71,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $gray;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $gray;
   }
 }
 
@@ -227,14 +227,14 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $gray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $gray;
     }
   }
 }
