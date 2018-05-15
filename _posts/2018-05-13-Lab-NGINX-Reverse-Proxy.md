@@ -10,7 +10,7 @@ This summer my servers are behind a firewall that I don't control. I can request
 
 A proxy takes requests from one computer and forwards them on to another, sometimes modifying the request before sending it on its way. A reverse proxy is a special kind of proxy that can fetch data from the appropriate backend server without the client knowing any of what goes on behind the scenes. This enables an infrastructure to include load balancing and caching among other features.
 
-![FrontendBackend](https://i.imgur.com/G7hDEvr.jpg)
+![PlanDiagram](/images/Lab-NGINX-Reverse-Proxy/VPN-ReverseProxy.png)
 
 ## Why use a reverse proxy?
 
