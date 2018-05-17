@@ -109,7 +109,7 @@ I have one stream called `Honeypot Data` with rules that it matches a hostname o
 
 Create a new dashboard then go back to the search page. Search for `login attempt` in the last 1 day. On the left under **Search result**  select `Add count to dashboard`. This will show the number of login attempts in the last 24 hours. You can also use the time filter keyword `today midnight` to show the attempts in the current day. Finally, add the histogram to the dashboard as well.
 
-**Extra Credit**
+#### Extra Credit
 
 Also from the left-hand side, you can select any field and choose `Quick Values` to get a chart of values found in the search. Try it for `attempt_username`.
 
@@ -118,6 +118,11 @@ Also from the left-hand side, you can select any field and choose `Quick Values`
 ## Conclusion
 
 I'm just getting started with Cowrie and Graylog. I hope to automate honeypot setup with Ansible soon and get more valuable analytics from Graylog.
+
+## Additional Notes
+
+- Configuration files are located in `/opt/graylog/` for the AMI images.
+- Set up dynamic DNS for the server to be used in honeypot syslog configuration.
 
 ## Resources
 
