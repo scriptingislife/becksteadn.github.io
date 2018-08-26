@@ -2,7 +2,7 @@
 published: false
 ---
 ---
-published: false
+published: true
 layout: post
 title: Opening My Smart TV to the World
 ---
