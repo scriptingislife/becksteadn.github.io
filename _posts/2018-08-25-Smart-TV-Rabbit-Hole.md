@@ -4,7 +4,7 @@ layout: post
 title: Opening My Smart TV to the World
 ---
 
-This year I moved into a new apartment and __had__ to get a TV for the living room. I ultimately got this [TCL Roku TV](https://www.bestbuy.com/site/tcl-55-class-led-4-series-2160p-smart-4k-uhd-tv-with-hdr-roku-tv/5878703.p?skuId=5878703) which my journey of getting is whole nother story. I powered it on, selected my language and country, then it was time to configure the network connection. **Shoot.**
+This year I moved into a new apartment and __had__ to get a TV for the living room. I ultimately got this [TCL Roku TV](https://www.bestbuy.com/site/tcl-55-class-led-4-series-2160p-smart-4k-uhd-tv-with-hdr-roku-tv/5878703.p?skuId=5878703) which my journey of getting is a whole nother story. I powered it on, selected my language and country, then it was time to configure the network connection. **Shoot.**
 
 You see, RIT gives students public IP addresses for everything besides mobile devices on the Wi-Fi. This is great for hosting content on my servers. It's not so great when you want to connect an [IoT device](https://blog.radware.com/uncategorized/2018/03/history-of-iot-botnets/) like an Amazon Echo, test Raspberry Pi project, or smart TV. I have plans to make a hidden Wi-Fi network using a Cisco access point behind a firewall and router to hopefully secure my devices better. Until then, I still need to watch Netflix. Reluctantly I registered it with the university and got the green checkmark on the TV indicating I could connect to the internet (and the internet could connect to me).
 
