@@ -23,7 +23,7 @@ One of the most useful features of urlscan.io is the log of all HTTP requests th
 
 #### Browsermob Proxy
 
-This proxy is a small java executable and was made with Selenium in mind. There is a Python module that runs the proxy server and collects the data. The Dockerfile downloads the zip file with the `.jar` and other code inside. The Python script starts the server, configures Selenium to use the proxy, and then shuts it down when the page has been loaded. 
+This proxy is a small Java JAR file and was made with Selenium in mind. There is a Python module that runs the proxy server and collects the data. The Dockerfile downloads the zip file with the `.jar` and other code inside. The Python script starts the server, configures Selenium to use the proxy, and then shuts it down when the page has been loaded. 
 
 To get Chrome to trust the proxy and to make sure all pages are loaded I added these lines to the Chrome options. This turns off all Chrome security options so that pages with self-signed certificates or a bad reputation on Google Safe Browsing are not blocked. 
 
