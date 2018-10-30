@@ -9,6 +9,6 @@ title: Miscellaneous Resources
 
 [Foolproof Ansible Playbooks with Molecule](/res/slides/Foolproof%20Ansible%20Playbooks%20with%20Molecule.pdf)
 
-[A Date with Data - Botnet Command and Control through Tinder (Almost)](Tinder%20C2.pdf)
+[A Date with Data - Botnet Command and Control through Tinder (Almost)](/res/slides/Tinder%20C2.pdf)
 
 ### More from Me
