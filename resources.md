@@ -5,10 +5,17 @@ title: Miscellaneous Resources
 
 ### Presentation Slides
 
-[Using a Dating Site as a Botnet Command and Control Server](/res/slides/Dating%20Site%20Botnet%20Command%20and%20Control.pdf)
+#### Foolproof Ansible Playbooks with Molecule
+* [Slides](/res/slides/Foolproof%20Ansible%20Playbooks%20with%20Molecule.pdf)
+* [RITSEC Presentation](https://youtu.be/hkb6E2lY_VM?t=2436)
 
-[Foolproof Ansible Playbooks with Molecule](/res/slides/Foolproof%20Ansible%20Playbooks%20with%20Molecule.pdf)
+#### A Date with Data - Botnet Command and Control through Tinder (Almost)
+* [Slides](/res/slides/Tinder%20C2.pdf)
+* [RITSEC Presentation](https://youtu.be/nHAwYPVRwbc)
 
-[A Date with Data - Botnet Command and Control through Tinder (Almost)](/res/slides/Tinder%20C2.pdf)
+#### Using a Dating Site as a Botnet Command and Control Server
+* [Slides](/res/slides/Dating%20Site%20Botnet%20Command%20and%20Control.pdf)
+* [RITSEC Presentation](https://youtu.be/p3L146EvmnA)
 
-### More from Me
+#### Get Internet Famous Using These 3 Tools
+* [SPARSA Presentation](https://youtu.be/uTfkcJsjKe8?t=4195)
