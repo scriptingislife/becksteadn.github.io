@@ -17,5 +17,5 @@ title: Miscellaneous Resources
 * [Slides](/res/slides/Dating%20Site%20Botnet%20Command%20and%20Control.pdf)
 * [RITSEC Presentation](https://youtu.be/p3L146EvmnA)
 
-#### Get Internet Famous Using These 3 Tools
+#### Get Internet Famous Using These 3 Tools - Blogging and Keeping up in Infosec
 * [SPARSA Presentation](https://youtu.be/uTfkcJsjKe8?t=4195)
