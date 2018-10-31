@@ -3,7 +3,7 @@ layout: default
 title: Miscellaneous Resources
 ---
 
-### Presentation Slides
+### Presentations
 
 #### Foolproof Ansible Playbooks with Molecule
 * [Slides](/res/slides/Foolproof%20Ansible%20Playbooks%20with%20Molecule.pdf)
