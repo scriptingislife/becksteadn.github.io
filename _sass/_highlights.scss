@@ -1,3 +1,4 @@
+@import "variables";
 
 .highlight {
   background-color: #32363E;
@@ -12,6 +13,8 @@
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  background-color: $darkerGray;
+  color: $white;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
