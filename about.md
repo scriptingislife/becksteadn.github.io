@@ -14,3 +14,5 @@ I am a computing security student at Rochester Institute of Technology. I write 
 - Blue Team, UB Network Defense's Lockdown v3, Fall 2017
 
 Presentation slides available on [resources page](/resources).
+
+![My Homelab](]({{site.baseurl}}/images/servers.jpg "My Homelab")
