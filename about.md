@@ -15,4 +15,4 @@ I am a computing security student at Rochester Institute of Technology. I write 
 
 Presentation slides available on [resources page](/resources).
 
-![My Homelab](]({{site.baseurl}}/images/servers.jpg "My Homelab")
+![My Homelab]({{site.baseurl}}/images/servers.jpg "My Homelab")
