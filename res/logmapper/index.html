@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map of Attempted SSH Logins</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            body {
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+            #map-frame {
+                width: 100%;
+                height: 90%;
+            }
+            #ic-refresh {
+                margin: 0 auto;
+                height: 40px;
+                width: auto;
+            }
+            .refresh {
+                padding-top: 20px;
+                padding-bottom: 5px;
+                vertical-align: middle;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Map of Attempted SSH Logins</h1>
+        <table class="w3-table w3-striped w3-border w3-centered">
+            <tr><th>Attempted Logins</th><th>Unique IP Addresses</th></tr>
+            <tr><td id='total_logins'>230996</td><td id='total_ips'>15455</td></tr>
+        </table>
+        <iframe id="map-frame" src="res/logmapper/markers.html"></iframe>
+    </body>
+</html>
