@@ -5,9 +5,13 @@ title: Miscellaneous Resources
 
 ### Presentations
 
+#### Build a Modern API with AWS
+* [Slides](/res/slides/Build%20a%20Modern%20API%20with%20AWS.pdf)
+* [RITSEC Presentation](https://youtu.be/-LkHJVnXY_A?t=2506)
+
 #### Foolproof Ansible Playbooks with Molecule
 * [Slides](/res/slides/Foolproof%20Ansible%20Playbooks%20with%20Molecule.pdf)
-* [RITSEC Presentation](https://youtu.be/hkb6E2lY_VM?t=2436)
+* [RITSEC Presentation](https://youtu.be/yNpKqGxxDc4)
 
 #### A Date with Data - Botnet Command and Control through Tinder (Almost)
 * [Slides](/res/slides/Tinder%20C2.pdf)
