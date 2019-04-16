@@ -13,6 +13,8 @@ What do you do when you come across a strange link? Curiosity takes over and you
 
 ## Computation (Lambda)
 
+This is the computing service that is at the center of Glimpse. Lambda is the serverless function platform for AWS. The code and all of its dependencies are packaged in a zip file and stored on S3.   
+
 ## Storage (S3 and Dynamo DB)
 
 ## Communication (API Gateway)
