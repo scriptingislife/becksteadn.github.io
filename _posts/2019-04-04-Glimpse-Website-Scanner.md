@@ -19,7 +19,7 @@ The Glimpse function is written in Python and uses [Selenium](https://www.seleni
 
 ## Storage (S3 and DynamoDB)
 
-
+S3 is one of Amazon's most well-known services. It's basic object storage that can meet a variety of needs.
 
 ## Communication (API Gateway)
 
