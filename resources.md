@@ -6,7 +6,7 @@ title: Miscellaneous Resources
 ### Presentations
 
 #### Vulnerable Machines with AWS
-* [Slides](/res/slides/Vulnerable%20Virtual%20Machines%20With%20Ansible.pdf)
+* [Slides](/res/slides/Vulnerable%20Machines%20with%20Ansible.pdf)
 
 #### Build a Modern API with AWS
 * [Slides](/res/slides/Build%20a%20Modern%20API%20with%20AWS.pdf)
