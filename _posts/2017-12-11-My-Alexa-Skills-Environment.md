@@ -1,7 +1,7 @@
 ---
-published: true
-layout: post
 title: My Alexa Skills Environment
+date: 2017-12-11 00:00:00 Z
+layout: post
 ---
 
 I first became interested in the Alexa Skills Kit when I got a strip of LED lights for Christmas. Python is my go to language so I used the [Flask-Ask 

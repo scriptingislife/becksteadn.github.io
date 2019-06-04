@@ -1,8 +1,9 @@
 ---
-published: true
-layout: post
 title: Log File To Google Map with Python
+date: 2017-07-20 00:00:00 Z
+layout: post
 ---
+
 Opening up a computer to the world exposes it to a plethora of bots scanning for default credentials, unpatched vulnerabilities, among other things. It's important to take this into consideration when configuring a publicly facing service. Key exchange or a strong password, access control, and keeping on top of updates are a must. When I first got to campus which has a mostly public facing network, I was amazed at the number of bots constantly scanning everything and anything.
 
 I first noticed this when randomly checking my SSH access log file. There was a long list of failed attempts from a multitude of strange IP addresses. After making sure my SSH configuration was locked down by using keys and not allowing root login, I decided to collect some information about these bots. The result is this application that will take any file containing IP addresses and output an HTML file with an interactive map using the Google Maps API.

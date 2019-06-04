@@ -1,8 +1,9 @@
 ---
-published: true
-layout: post
 title: The Best Pizza Dough Recipe
+date: 2018-02-14 00:00:00 Z
+layout: post
 ---
+
 This pizza dough has been the best so far in my quest for the perfect crust.
 
 ### Ingredients

@@ -1,7 +1,7 @@
 ---
-published: true
-layout: post
 title: Centralize Cowrie Honeypot Logs with Graylog in AWS
+date: 2018-05-16 00:00:00 Z
+layout: post
 ---
 
 This summer I want to do more botnet analysis. I've done some before with my [rootonyour.webcam](https://rootonyour.webcam) SSH log analysis [sensor](https://github.com/becksteadn/Log-Sensor) and [server](https://github.com/becksteadn/Mapper-Server) projects. This really only included geolocation and linked to Shodan information on running services. Cowrie is a medium interaction honeypot that can log login credentials and command execution and also capture downloaded files. I don't prioritize availability with my self-hosted servers, so I'd rather put everything in the cloud.

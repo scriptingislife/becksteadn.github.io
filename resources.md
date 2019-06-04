@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Miscellaneous Resources
+layout: default
 ---
 
 ### Presentations

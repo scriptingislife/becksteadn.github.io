@@ -1,8 +1,9 @@
 ---
-published: true
-layout: post
 title: Install and Configure OpenVPN Access Server
+date: 2017-08-19 00:00:00 Z
+layout: post
 ---
+
 A while ago I wrote [an introduction to virtual private networks]({{site.baseurl}}/VPN-Intro). I have an odd love for this technology and the wide array of uses that come with implementing it. What used to be a tool for enterprise use is now almost a commonly known term. Just this evening, [NPR ran a story](http://www.npr.org/sections/alltechconsidered/2017/08/17/543716811/turning-to-vpns-for-online-privacy-you-might-be-putting-your-data-at-risk) about normal people using VPNs to deter spying by internet providers and the government. They recommend the safest way to use a VPN is to host it yourself. Today it is easier than ever to configure a quality VPN server.
 
 Before OpenVPN Access Server, I used [Streisand](https://github.com/jlund/streisand) and [PiVPN](http://www.pivpn.io/) as my main VPN setup tools. They're both quick to fully setup and easy to manage. I don't think I've ever SSH'd into my Streisand instance. Access Server is a front end for a OpenVPN server. For an administrator, it can manage users and settings. PiVPN allows for easy creation and removal of clients through the command line. Access Server adds functionality to change settings and even authenticate through a LDAP or RADIUS server. Clients can also log in to the web server to download operating specific installers and their connection profile (the .ovpn file).

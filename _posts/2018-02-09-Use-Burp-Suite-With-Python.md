@@ -1,8 +1,9 @@
 ---
-published: true
-layout: post
 title: Proxy Python Requests Through Burp Suite
+date: 2018-02-09 00:00:00 Z
+layout: post
 ---
+
 I write a lot of Python scripts that interact with websites using the requests module. To figure out the requests I need to make for say, logging in, I do the process manually while Burp Suite is running and then model it. It wasn't until a few days ago while debugging that I wondered if I could proxy my Python programs to make sure it was sending the correct data.
 
 ### Configuration

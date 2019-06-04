@@ -1,8 +1,9 @@
 ---
-published: true
-layout: post
 title: Creating a URL Scanner with Selenium and Docker
+date: 2018-08-28 00:00:00 Z
+layout: post
 ---
+
 I used [urlscan.io](https://urlscan.io) a lot this summer at my internship with a SOC. Every time I used it I wondered how it worked and if I could build something similar. The week after my internship ended I created [HTTP-Info](https://github.com/becksteadn/HTTP-Info) as my attempt to gather as much information about a website as I could.
 
 ### The Container

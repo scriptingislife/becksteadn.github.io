@@ -1,7 +1,7 @@
 ---
-published: true
-layout: post
 title: Configuring a Reverse Proxy in AWS for my Homelab
+date: 2018-05-14 00:00:00 Z
+layout: post
 ---
 
 This summer my servers are behind a firewall that I don't control. I can request to have ports opened but it'd take a while and I like to have things under my control. I've tried setting up a reverse proxy before but the concept confused me and I never had a real use case for one.

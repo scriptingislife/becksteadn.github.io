@@ -1,8 +1,7 @@
 ---
-layout: page
 title: Contact Me
-permalink: /contact-me/
-published: true
+permalink: "/contact-me/"
+layout: page
 ---
 
 <form action="https://formspree.io/blog@mail.scriptingis.life" method="POST">

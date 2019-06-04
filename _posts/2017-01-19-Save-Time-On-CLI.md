@@ -1,8 +1,9 @@
 ---
-published: true
-layout: post
 title: Save Time On The Command Line With These Two Tools
+date: 2017-01-19 00:00:00 Z
+layout: post
 ---
+
 Command-line interfaces (CLI) give users the ability to quickly execute commands and change virtually anything about a machine. However, sometimes remembering  or researching the write command or syntax can take more time than clicking through a GUI. These two tools will help save you time by simplifying commands and making your everyday work more efficient.
 
 ## TLDR

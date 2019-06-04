@@ -1,7 +1,7 @@
 ---
-published: true
-layout: post
 title: Opening My Smart TV to the World
+date: 2018-08-25 00:00:00 Z
+layout: post
 ---
 
 This year I moved into a new apartment and __had__ to get a TV for the living room. I ultimately got this [TCL Roku TV](https://www.bestbuy.com/site/tcl-55-class-led-4-series-2160p-smart-4k-uhd-tv-with-hdr-roku-tv/5878703.p?skuId=5878703) which my journey of getting is a whole nother story. I powered it on, selected my language and country, then it was time to configure the network connection. **Shoot.**
