@@ -11,6 +11,7 @@ The examples in the official documentation mostly reference load balancing. When
 
 I find delegation to be most useful when making reports because you're able to write facts and other data on the remote host to a local file.
 
+{% raw %}
 ```yaml
 - name:
   lineinfile:
@@ -18,6 +19,7 @@ I find delegation to be most useful when making reports because you're able to w
     line: "{{ ansible_hostname }} {{ ansible_distribution }}-{{ ansible_distribution_version}}"
   delegate_to: localhost
 ```
+{% endraw %}
 
 A more complicated example would execute a task on a remote host and register a variable which can then be written to a local report.
 
