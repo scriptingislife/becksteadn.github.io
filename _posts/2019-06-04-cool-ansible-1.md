@@ -3,7 +3,7 @@ published: true
 title: Cool Ansible Things 1 - delegate_to
 layout: post
 ---
-I've been working with Ansible a lot recently and consequently also been reading about it. There are some things I've found that are incredibly useful or just interesting. In this series I'll quickly go over something I learned and give examples of where it may be useful.
+I've been working with Ansible a lot recently and consequently also been reading about it. There are some things I've found that are incredibly useful or just interesting. In this series I'll quickly go over something I learned and give examples of where it may be help.
 
 First up is the `delegate_to` keyword. It can be appended to a task in the same place as `when` and `register`. An IP address or host that Ansible knows about is required (`delegate_to: web1.example.com`). It will run the task on the delegated computer but with all of the facts of the original host.
 
