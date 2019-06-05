@@ -1,6 +1,6 @@
 ---
-published: false
-title: Cool Ansible 1 - delegate_to
+published: true
+title: Cool Ansible Things 1 - delegate_to
 layout: post
 ---
 I've been working with Ansible a lot recently and consequently also been reading about it. There are some things I've found that are incredibly useful or just interesting. In this series I'll quickly go over something I learned and give examples of where it may be useful.
@@ -21,10 +21,10 @@ I find delegation to be most useful when making reports because you're able to w
 
 A more complicated example would execute a task on a remote host and register a variable which can then be written to a local report.
 
-Bonus tidbit. `local_action` is similar to `delegate_to` but implies delegation to the controller. You can read more about it in the official documentation.
+**Bonus tidbit.** `local_action` is similar to `delegate_to` but implies delegation to the controller. You can read more about it in the official documentation.
 
 ### Resources
 
-[Delegation Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html#delegation)
+[Official Docs on Delegation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html#delegation)
 
-[Mastering Ansible](https://www.packtpub.com/virtualization-and-cloud/mastering-ansible-third-edition) 
+[Mastering Ansible](https://www.packtpub.com/virtualization-and-cloud/mastering-ansible-third-edition)
