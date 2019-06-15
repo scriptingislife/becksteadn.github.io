@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Cool Ansible 2 - Get User Input During Execution
 ---
-
+{% raw %}
 The `pause` module can stop execution for an amount of time or wait for the user to hit Return. One of its return parameters is `user_input` which makes it great for getting variables or confirming actions during task execution. In this example, we ask the user to confirm that they want to delete an important file. The deletion task will be only be run when the user explicitly types `yes` or `true`.
 
 ```yaml
@@ -53,3 +53,4 @@ As you can see, prompts can be very useful but may introduce unneeded complexity
 [Pause Module Documentation](https://docs.ansible.com/ansible/latest/modules/pause_module.html)
 
 [Ansible Tower Best Practices](https://docs.ansible.com/ansible-tower/latest/html/userguide/best_practices.html)
+{% endraw %}
