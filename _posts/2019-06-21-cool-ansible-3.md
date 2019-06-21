@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Cool Ansible 3 - Advanced Templating
 ---
@@ -105,6 +105,6 @@ This is just the tip of the iceberg when it comes to templating. Jinja already h
 
 [Jinja Docs](http://jinja.pocoo.org/docs/2.10/templates/)
 
-[Ansible Docs on Jinja2](https://docs.ansible.com/ansible/latest/user_guide/playbooks_templating.html)
+[Ansible Docs about Jinja2](https://docs.ansible.com/ansible/latest/user_guide/playbooks_templating.html)
 
 {% endraw %}
