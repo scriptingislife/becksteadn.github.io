@@ -5,6 +5,10 @@ layout: default
 
 ### Presentations
 
+#### The Life and Death of a Carding Kingpin
+* [Slides](/res/slides/The%20Life%20and%20Death%20of%20a%20Carding%20Kingpin.pdf)
+* [RITSEC Presentation](https://www.youtube.com/watch?v=sz6IJjxlspo)
+
 #### Vulnerable Machines with AWS
 * [Slides](/res/slides/Vulnerable%20Machines%20with%20Ansible.pdf)
 
