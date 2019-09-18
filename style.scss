@@ -144,6 +144,29 @@ img {
     clear: both;
 }
 
+
+/*********************/
+/*    PAGINATION     */
+/*********************/
+.bottompagination span.navigation {
+  display: block;
+  font-size: 0.93rem;
+  padding: 15px 0 0 0;
+  text-align: center;
+  margin-bottom: 0rem;
+  color: #999;
+  border-top: 1px solid #ddd;
+}
+
+.bottompagination span.navigation i {
+  display: inline-block;
+}
+
+.pagination {
+  display: block;
+}
+
+
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/

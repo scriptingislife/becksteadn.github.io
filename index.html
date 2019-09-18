@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="posts">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <article class="post">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -15,4 +15,14 @@ layout: default
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
+
+<!-- Pagination
+================================================== -->
+  <div class="bottompagination">
+    <div class="pointerup"><i class="fa fa-caret-up"></i></div>
+    <span class="navigation" role="navigation">
+        {% include pagination.html %}
+    </span>
+  </div>
+
 </div>
