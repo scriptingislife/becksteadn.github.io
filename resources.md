@@ -5,7 +5,7 @@ layout: default
 
 ## Presentations
 
-### Beyond `ip a` - Learning Che `ip` Command
+### Beyond 'ip a' - Learning The 'ip' Command
 * [Slides](/res/slides/Beyond%20ip%20a%20-%20Learning%20the%20ip%20command.pdf)
 
 ### Cloud Security - An IAM Game
