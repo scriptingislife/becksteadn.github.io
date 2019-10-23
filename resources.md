@@ -5,6 +5,10 @@ layout: default
 
 ## Presentations
 
+### Cloud Security - An IAM Game
+* [Slides](/res/slides/Cloud%20Security%20-%20An%20IAM%20Game.pdf)
+* [RITSEC Presentation](https://www.youtube.com/watch?v=AoZEWD5tlBU)
+
 ### Gotta Catch 'Em All - Domain Generation Algorithms
 * [Slides](/res/slides/Domain%20Generation%20Algorithms.pdf)
 
