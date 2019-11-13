@@ -10,6 +10,7 @@ layout: default
 
 ### Beyond 'ip a' - Learning The 'ip' Command
 * [Slides](/res/slides/Beyond%20ip%20a%20-%20Learning%20the%20ip%20command.pdf)
+* [RITSEC Presentation](https://www.youtube.com/watch?v=WwDvJBjGVfk)
 
 ### Cloud Security - An IAM Game
 * [Slides](/res/slides/Cloud%20Security%20-%20An%20IAM%20Game.pdf)
