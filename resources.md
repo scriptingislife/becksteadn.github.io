@@ -5,6 +5,9 @@ layout: default
 
 ## Presentations
 
+### RITSEC Education Section - Cloud
+* [RITSEC Presentation](https://www.youtube.com/watch?v=YEH3-GDgbB4)
+
 ### Beyond 'ip a' - Learning The 'ip' Command
 * [Slides](/res/slides/Beyond%20ip%20a%20-%20Learning%20the%20ip%20command.pdf)
 
