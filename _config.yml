@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 name: Scripting is Life
-description: The journey of a computer security student with too many projects.
+description: The journey of a security analyst with too many projects.
 avatar: "/images/profile.png"
 paginate: 5
 footer-links:

@@ -4,7 +4,7 @@ permalink: "/about/"
 layout: page
 ---
 
-I am a computing security student at Rochester Institute of Technology. I write a python script for everything I do. I run a virtualized homelab for sysadmin and networking practice. This blog is a record of things I've learned through school, competitions, and projects.
+I am a security analyst with a mind for automation. I love exploring new things in the cloud and catching interesting activity in my honeypots.
 
 [Get my resume](/res/resume.pdf)
 
