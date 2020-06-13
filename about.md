@@ -6,8 +6,6 @@ layout: page
 
 I am a security analyst with a mind for automation. I love exploring new things in the cloud and catching interesting activity in my honeypots.
 
-[Get my resume](/res/resume.pdf)
-
 Presentation slides available on the [presentations page](/resources).
 
 ### Activities
