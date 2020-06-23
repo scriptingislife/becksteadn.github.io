@@ -11,22 +11,22 @@ Sometimes I have a casual personal project where I just want to get the logs int
 Edit `/etc/nginx/nginx.conf` and add the following lines in the **Logging Settings** section. Restart the service.
 
 ```jsx
-				log_format graylog2_json escape=json '{ "timestamp": "$time_iso8601", '
-                     '"remote_addr": "$remote_addr", '
-                     '"body_bytes_sent": $body_bytes_sent, '
-                     '"request_time": $request_time, '
-                     '"response_status": $status, '
-                     '"request": "$request", '
-                     '"request_method": "$request_method", '
-                     '"host": "$host",'
-                     '"upstream_cache_status": "$upstream_cache_status",'
-                     '"upstream_addr": "$upstream_addr",'
-                     '"http_x_forwarded_for": "$http_x_forwarded_for",'
-                     '"http_referrer": "$http_referer", '
-                   '"http_user_agent": "$http_user_agent" }';
+log_format graylog2_json escape=json '{ "timestamp": "$time_iso8601", '
+  '"remote_addr": "$remote_addr", '
+  '"body_bytes_sent": $body_bytes_sent, '
+  '"request_time": $request_time, '
+  '"response_status": $status, '
+  '"request": "$request", '
+  '"request_method": "$request_method", '
+  '"host": "$host",'
+  '"upstream_cache_status": "$upstream_cache_status",'
+  '"upstream_addr": "$upstream_addr",'
+  '"http_x_forwarded_for": "$http_x_forwarded_for",'
+  '"http_referrer": "$http_referer", '
+'"http_user_agent": "$http_user_agent" }';
 
-        access_log syslog:server=<domain-or-ip>:12301 graylog2_json;
-        error_log syslog:server=<domain-or-ip>.life:12302;
+access_log syslog:server=<domain-or-ip>:12301 graylog2_json;
+error_log syslog:server=<domain-or-ip>.life:12302;
 ```
 
 ## Graylog Content Pack
