@@ -1,10 +1,10 @@
 ---
-published: true
+published: false
 layout: post
 title: The Technical Tricks I Learned Playing OpenSOC
 ---
 
-As an analyst for a major MSSP, I use the fancy expensive tools for work. OpenSOC showcases the power of some awesome open source tools that many people have never used. Here are some things I learned by having access to data that's normally hidden behind an API or totally inaccessible and features not included in large platforms.
+As a security analyst for a major MSSP, I use the fancy expensive tools for work. OpenSOC showcases the power of some awesome open source tools that many people have never used. Here are some things I learned by having access to data that's normally hidden behind an API or totally inaccessible and features not included in large platforms.
 
 ## Contents
 
