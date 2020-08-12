@@ -1,27 +1,15 @@
 ---
-published: false
+published: true
 layout: post
 title: The Technical Tricks I Learned Playing OpenSOC
 ---
 
 As a security analyst for a major MSSP, I use the fancy expensive tools for work. OpenSOC showcases the power of some awesome open source tools that many people have never used. Here are some things I learned by having access to data that's normally hidden behind an API or totally inaccessible and features not included in large platforms.
 
-## Contents
 
-Sysmon 
-
-* [Event IDs](#Sysmon)
-
-Graylog
-
-* [Quick Values](#Quick-Values)
-* [Surrounding Messages](#Show-Surrounding-Messages)
-* [\_Exists_](#_Exists_)
-
-Osquery
-
-* [File Hashes](#File-Hashes)
-* [Persistence Items](#Persistence-Items)
+<h2>Contents</h2>
+* TOC
+{:toc}
 
 ## Sysmon
 
@@ -29,21 +17,25 @@ I'd always heard of Sysmon, especially SwiftOnSecurity's [sysmon config](https:/
 
 > System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time.
 
-And here I was thinking you needed costly EDR sensors to get that information. All of the details an analyst needs to investigate a typical alert is collected by the Sysmon service. It's amazing how quickly I started remembering Event IDs. Process creations, file modifications, and network connections are crucial to understanding what happened on a system. These were the events I found myself constantly searching for.
+And here I was thinking you needed costly EDR sensors to get that information. All of the details an analyst needs to investigate a typical alert is collected by the Sysmon service. 
+
+### Event IDs
+
+It's amazing how quickly I started remembering Event IDs. Process creations, file modifications, and network connections are crucial to understanding what happened on a system. These were the events I found myself constantly searching for.
 
 This [Sysmon cheatsheet](https://github.com/olafhartong/sysmon-cheatsheet) is a great graphic to show the IDs and fields for each kind of event. This [appendix in the Microsoft docs](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor) also contains every Windows Event ID (the 4000 numbers below).
 
-| ID   | Name                                   |   |   |   |
-|------|----------------------------------------|---|---|---|
-| 1    | Process Created                        |   |   |   |
-| 3    | Network Connection                     |   |   |   |
-| 8    | CreateRemoteThread (Process Injection) |   |   |   |
-| 11   | File Created                           |   |   |   |
-| 13   | Registry Modified                      |   |   |   |
-| 4103 | PowerShell Activity                    |   |   |   |
-| 4624 | Account Logon Success                  |   |   |   |
-| 4697 | Service Created                        |   |   |   |
-| 4698 | Scheduled Task Created                 |   |   |   |
+| Event ID   | Name                                   |
+|------|----------------------------------------|
+| 1    | Process Created                        |
+| 3    | Network Connection                     |
+| 8    | CreateRemoteThread (Process Injection) |
+| 11   | File Created                           |
+| 13   | Registry Modified                      |
+| 4103 | PowerShell Activity                    |
+| 4624 | Account Logon Success                  |
+| 4697 | Service Created                        |
+| 4698 | Scheduled Task Created                 |
 
 ## Graylog
 
@@ -79,7 +71,7 @@ A great resource to view all tables available is the [Schema](https://osquery.io
 
 One of my most common needs as an analyst is to get the hash of a file that wasn't recorded by the platform. Osquery's `hash` table does just that. Give it a directory, path, or spice it up with some regex and Osquery will return the MD5, SHA1, and SHA256 hashes of the matched files.
 
-![Hashes Table Query]({{site.baseurl}}/images/hashes.png)
+![Hashes Table Query]({{site.baseurl}}/images/Technical-Tricks-OpenSOC/hashes.png)
 
 ### Persistence Items
 
