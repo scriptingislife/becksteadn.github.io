@@ -115,12 +115,14 @@ if __name__ == '__main__':
 
 Create another file named **templates.yaml** in the same Memory Game folder and add the responses below.
 
+{% raw %}
 ```
 welcome: Welcome to memory game. I'm going to say three numbers for you to repeat backwards. Ready?
 round: Can you repeat the numbers {{ numbers|join(", ") }} backwards?
 win: Good job!
 lose: Sorry, that's the wrong answer.
 ```
+{% endraw %}
 
 These two files are all that's needed to run the Memory Game skill. The Flask server can now be started using the command
 
