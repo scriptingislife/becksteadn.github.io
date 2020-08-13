@@ -7,7 +7,7 @@
 }
 
 a {
-    color: $lightPurple;
+    color: $lightPurple !important;
     &:hover, &:active {
       color: $blue !important;
     }
