@@ -62,7 +62,7 @@ The `_exists_` field takes in another field as its value. It will only return re
 
 ## Osquery
 
-I've played with osquery a little bit before and even gave a talk about it in college, but I had never used it for a real investigation. Kolide is probably the most popular way of managing osquery for an environment but OpenSOC uses a custom front-end that connects through Puppet.
+I've played with osquery a little bit before and even gave a talk about it in college, but I had never used it for a real investigation. Kolide is probably the most popular way of managing osquery for an environment but OpenSOC uses a custom front-end that connects through Salt.
 
 A great resource to view all tables available is the [Schema](https://osquery.io/schema) page. Recon Infosec's [Recon Hunt Queries](https://rhq.reconinfosec.com) contain a treasure trove of DFIR related queries.
 
