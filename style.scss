@@ -24,7 +24,6 @@ body {
   background-image:url(images/ep_naturalblack.png);
   font: 18px/1.4 $helvetica;
   color: $white;
-  font-family: Lato;
 }
 
 .container {
@@ -73,11 +72,11 @@ p {
 }
 
 a {
-  color: $gray;
+  color: $lightPurple;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $gray;
+    color: $lightGray;
   }
 }
 

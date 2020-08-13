@@ -1,24 +1,33 @@
+@import "variables";
+
+body {
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 100 !important;
+    font-size: 18px !important;
+}
+
+a {
+    color: $lightPurple;
+    &:hover, &:active {
+      color: $white;
+    }
+  }
+
+code.language-plaintext {
+    font-family: $monospace, monospace !important;
+    color: $blue;
+    background-color: transparent;
+}
+
 blockquote {
     font-size: 90% !important;
 }
 
-img {
+.post img {
     display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%; 
-}
-
-.contents ul {
-    list-style-type: square;
-}
-
-ul.a {
-    list-style-type: square;
-}
-
-ul.b {
-    list-style-type: square;
 }
 
 table {
