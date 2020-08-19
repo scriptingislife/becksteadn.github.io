@@ -4,15 +4,9 @@ permalink: "/about/"
 layout: page
 ---
 
-I am a security analyst with a mind for automation. I love exploring new things in the cloud and catching interesting activity in my honeypots.
+I am a security analyst with a mind for automation. I love pushing the limits of the AWS free tier and sometimes catch interesting activity in my honeypots. This blog contains a lot of small tidbits that I learn from work, projects, and CTFs. Don't expect any hot takes or zero days but don't rule them out either.
+
 
 Presentation slides available on the [presentations page](/resources).
-
-### Activities
-- Member of RITSEC (Formerly RC3 and SPARSA)
-- Blue Team Competitor
-  - Information Security Talent Search, Spring 2019
-  - IRSeC, Spring 2017/2018, 2nd Place
-  - University of Buffalo Lockdown v3, Fall 2017
 
 ![My Homelab]({{site.baseurl}}/images/servers.jpg "My Homelab")
