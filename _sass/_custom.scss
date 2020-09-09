@@ -34,6 +34,10 @@ blockquote {
     @extend .centered;
 }
 
+.tenor-gif-embed {
+  @extend .centered;
+}
+
 .caption {
   @extend .centered;
   text-align: center;
