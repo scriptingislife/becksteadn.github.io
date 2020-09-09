@@ -23,11 +23,21 @@ blockquote {
     font-size: 90% !important;
 }
 
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: $mediaSize; 
+}
+
 .post img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%; 
+    @extend .centered;
+}
+
+.caption {
+  @extend .centered;
+  text-align: center;
+  color: $gray;
 }
 
 table {
