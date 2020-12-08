@@ -5,7 +5,13 @@ layout: default
 
 ## Presentations
 
-### RITSEC Education Section - Cloud
+### RITSEC Education Section - Cloud 2020
+* [RITSEC Presentation](www.youtube.com/watch?v=3ljgdc8D7Fk)
+
+### How to Give a Presentation at RITSEC
+* [RITSEC Presentation](www.youtube.com/watch?v=ETgmisCZnC4)
+
+### RITSEC Education Section - Cloud 2019
 * [RITSEC Presentation](https://www.youtube.com/watch?v=YEH3-GDgbB4)
 
 ### Beyond 'ip a' - Learning The 'ip' Command
