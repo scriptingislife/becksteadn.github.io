@@ -26,7 +26,7 @@ log_format graylog2_json escape=json '{ "timestamp": "$time_iso8601", '
 '"http_user_agent": "$http_user_agent" }';
 
 access_log syslog:server=<domain-or-ip>:12301 graylog2_json;
-error_log syslog:server=<domain-or-ip>.life:12302;
+error_log syslog:server=<domain-or-ip>:12302;
 ```
 
 ## Graylog Content Pack
