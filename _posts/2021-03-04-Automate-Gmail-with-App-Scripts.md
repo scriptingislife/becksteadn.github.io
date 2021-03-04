@@ -14,7 +14,7 @@ Unfortunately, filters cannot automatically mark all promotions as read. Enter G
 
 ## Create a Project
 
-Make a new project. Immediately you're thrown into the IDE. Change the name and get ready to code.
+Head to [script.google.com](https://script.google.com) and make a new project. Immediately you're thrown into the IDE. Change the name and get ready to code.
 
 ## Write the Code
 
