@@ -8,6 +8,8 @@ I'm not one for playlists. My Spotify routine typically involves listening to my
 
 I wanted to be able to download the most recently liked songs but not all 1,158. A playlist of just the latest 30 songs would be great. That's what we'll build in this blog post.
 
+![Example Playlist]({{site.baseurl}}/images/Automate-Spotify-With-Lambda/playlist.png)
+
 ## Create a Spotify Application
 
 Authenticating with the Spotify API requires creating an application in the [Developer Dashboard](https://developer.spotify.com/dashboard/). There is only one setting that needs to be changed. Add a Redirect URI with the value `http://localhost:9090`. This lets Spotipy automatically complete the authorization process. Yes, Spotipy **not** Spotify*.* Spotipy is a Python library for the Spotify Web API and will be the core of our script.
