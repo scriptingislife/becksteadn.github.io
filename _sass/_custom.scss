@@ -32,6 +32,8 @@ blockquote {
 
 .post img {
     @extend .centered;
+    width: 100%;
+    max-width: 400px;
 }
 
 .tenor-gif-embed {
