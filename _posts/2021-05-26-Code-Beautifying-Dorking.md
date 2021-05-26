@@ -4,7 +4,7 @@ layout: post
 title: Information Disclosure via a Code Beautifying Site
 ---
 
-The internet is full of awesome free tools. I use [CyberChef](https://gchq.github.io/CyberChef/) every day as a security analyst. Another example is [Have I Been Pwned](https://haveibeenpwned.com). These are great services and they do a lot of good. The tool we'll focus on is [codebeautify.org](https://codebeautify.org) which among other things, beautifies code.
+The internet is full of awesome free tools. I use [CyberChef](https://gchq.github.io/CyberChef/) almost every day. Another example is [Have I Been Pwned](https://haveibeenpwned.com). These are great services and they do a lot of good. The tool we'll focus on is [codebeautify.org](https://codebeautify.org) which among other things, beautifies code.
 
 I've used sites like this extensively to beautify JSON. Throw in a mess of brackets and quotes and get out perfectly formatted data. Where is it transformed though? Is it sent to a server? Is it stored on the server? Free tools are great but it's important to know what they're doing.
 
