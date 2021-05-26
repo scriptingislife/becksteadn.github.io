@@ -10,7 +10,7 @@ I've used sites like this extensively to beautify JSON. Throw in a mess of brack
 
 A lot of the things I write about now are a result of [interesting things](https://scriptingis.life/Sinkholing-Botnet/) I've seen while handling alerts as a security analyst. This is one of those things. While researching a malicious file, a Google result was for [codebeautify.org](https://codebeautify.org). It contained some text that wasn't really relevant. What stuck with me was that this person had beautified some code and somehow it was indexed by Google.
 
-## What You Came Here For
+## What You Came For
 
 Obviously the next step was to see what other uploads could be searched. Passwords?
 
