@@ -14,7 +14,7 @@ At first I just used the credits for virtual machines that I could run 24/7. As 
 
 ## Pick Your Fighter
 
-Certain services have more powerful free tiers. Think of power as the number of projects you can run while staying inside the usage limit. EC2 allows one free instance. That's good enough for a few continuously running programs. If you're looking to get the cloud experience, a single always-running EC2 instance is not it. We want to use the cool cloud technologies they talk about at conferences.
+Certain services have more powerful free tiers. The power of a free tier can be thought of as the number of projects you can run while staying inside the usage limit. EC2 allows one free instance. That's good enough for a few continuously running programs. If you're looking to get the cloud experience, a single always-running EC2 instance is not it. We want to use the cool cloud technologies they talk about at conferences.
 
 The services I use the most are Lambda, API Gateway, S3, and DynamoDB. These services are extremely cheap and the free tier has more than enough capacity for hobby projects. Here is my  free tier usage in May.
 
