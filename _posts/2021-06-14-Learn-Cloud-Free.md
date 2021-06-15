@@ -92,7 +92,7 @@ I've only mentioned a few of my favorites. Two honorable mentions are SQS and SN
 
 ## Unlimited Power
 
-There are some AWS services that are regardless of usage. Some examples are IAM, Biliing, and Organizations. IAM is the most popular. While you can't build anything using only IAM, it is a critical part of cloud environments. Identity and Access Management makes up 20% of the AWS Specialty - Security certification exam. Create bucket policies. Assume roles. Make requests to the metadata service. IAM use is free and unlimited.
+There are some AWS services that are free regardless of usage. Some examples are IAM, Biliing, and Organizations. IAM is the most popular. While you can't build anything using only IAM, it is a critical part of cloud environments. Identity and Access Management makes up 20% of the AWS Specialty - Security certification exam. Create bucket policies. Assume roles. Make requests to the metadata service. IAM use is free and unlimited.
 
 Billing may seem boring. The truth is when everything has a cost, optimizing architectures becomes crucial. Understanding how your programming decisions impact your bill is a valuable skill to have. Analyze your bill every few months and see if your applications are using the amount of resources you expected. 
 
