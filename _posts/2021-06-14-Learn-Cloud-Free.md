@@ -98,6 +98,8 @@ Billing may seem boring. The truth is when everything has a cost, optimizing arc
 
 ## Alexa Is Your Angel Investor
 
+*Update: The Alexa Promotional Credits program has now been reduced to $25 to encourage use of Alexa Hosted Skills.*
+
 Here's a hack I don't think many people know. You can get AWS credits for building a skill (app) for Alexa. So far I have received $4,000 in promotional credits this way. If the skill is hosted on AWS and costs pass the free tier, you will get $100 in AWS credit expiring at the end of the month. This will be the case every month until the program ends. The program details can be found in the Resources section below.
 
 Lambda is the typical way to run Alexa skills on AWS. As mentioned earlier, using up the Lambda free tier is pretty darn difficult. The EC2 free tier on the other hand is just one small instance. I wrote a [basic post](https://scriptingis.life/My-Alexa-Skills-Environment/) and a [full guide](https://scriptingis.life/Alexa-Skills-Complete-Guide/) to how I run my skills on EC2. I'm sure it's a bit outdated, but you get the point. Combine Flask, DynamicDNS, and Let's Encrypt and you'll have the HTTPS endpoint Alexa requires.
