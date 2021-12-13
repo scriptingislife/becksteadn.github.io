@@ -44,7 +44,7 @@ error_log /var/log/nginx/error.log;
 
 ## Graylog Content Pack
 
-Download this [content pack](https://raw.githubusercontent.com/scriptingislife/graylog-content-pack-nginx-syslog/main/content_pack.json) and upload it to Graylog by going to `System → Content Packs`. This will create the `nginx-syslog` input. The extractors attached to the input parse the JSON in the syslog message and also replaces the `message` field with a short readable summary.
+Download this [content pack](https://raw.githubusercontent.com/scriptingislife/graylog-content-pack-nginx-syslog/main/content_pack.json) and upload it to Graylog by going to `System → Content Packs` then install it. This will create the `nginx-syslog` input. The extractors attached to the input parse the JSON in the syslog message and also replace the `message` field with a short readable summary.
 
 ## Wrap Up
 
