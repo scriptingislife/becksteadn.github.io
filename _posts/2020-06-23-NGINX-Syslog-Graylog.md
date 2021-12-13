@@ -8,39 +8,52 @@ Sometimes I have a casual personal project where I just want to get the logs int
 
 ## Configuring NGINX
 
-Edit `/etc/nginx/nginx.conf` and add the following lines in the **Logging Settings** section. Restart the service.
+Updated: Since many NGINX content packs are outdated and do not target baremetal servers, I created my own. These instructions have been modified to use my version. 
+
+Edit `/etc/nginx/nginx.conf` and add the following lines in the `Logging Settings` section. Replace `logging.example.com` with the domain or IP address of your Graylog server. Restart the service.
 
 ```jsx
-log_format graylog2_json escape=json '{ "timestamp": "$time_iso8601", '
-  '"remote_addr": "$remote_addr", '
-  '"body_bytes_sent": $body_bytes_sent, '
-  '"request_time": $request_time, '
-  '"response_status": $status, '
-  '"request": "$request", '
-  '"request_method": "$request_method", '
-  '"host": "$host",'
-  '"upstream_cache_status": "$upstream_cache_status",'
-  '"upstream_addr": "$upstream_addr",'
-  '"http_x_forwarded_for": "$http_x_forwarded_for",'
-  '"http_referrer": "$http_referer", '
-'"http_user_agent": "$http_user_agent" }';
+  	log_format graylog_json escape=json '{ "timestamp": "$time_iso8601", '
+         '"remote_addr": "$remote_addr", '
+         '"connection": "$connection", '
+         '"connection_requests": $connection_requests, '
+         '"pipe": "$pipe", '
+         '"body_bytes_sent": $body_bytes_sent, '
+         '"request_length": $request_length, '
+         '"request_time": $request_time, '
+         '"response_status": $status, '
+         '"request": "$request", '
+         '"request_method": "$request_method", '
+         '"host": "$host", '
+         '"upstream_cache_status": "$upstream_cache_status", '
+         '"upstream_addr": "$upstream_addr", '
+         '"http_x_forwarded_for": "$http_x_forwarded_for", '
+         '"http_referrer": "$http_referer", '
+         '"http_user_agent": "$http_user_agent", '
+         '"http_version": "$server_protocol", '
+         '"remote_user": "$remote_user", '
+         '"http_x_forwarded_proto": "$http_x_forwarded_proto", '
+         '"upstream_response_time": "$upstream_response_time", '
+         '"nginx_access": true }';
 
-access_log syslog:server=<domain-or-ip>:12301 graylog2_json;
-error_log syslog:server=<domain-or-ip>:12302;
+	access_log syslog:server=logging.example.com:12401 graylog_json;
+
+	access_log /var/log/nginx/access.log;
+	error_log /var/log/nginx/error.log;
 ```
 
 ## Graylog Content Pack
 
-Download this [content pack](https://raw.githubusercontent.com/lewisgeorge-innoscale/graylog3-content-pack-nginx-docker/master/content_pack.json) and upload it to Graylog by going to `System → Content Packs`. This will create the `nginx access log` and `nginx error log` inputs as well as several streams and other components. 
+Download this [content pack](https://raw.githubusercontent.com/scriptingislife/graylog-content-pack-nginx-syslog/main/content_pack.json) and upload it to Graylog by going to `System → Content Packs`. This will create the `nginx-syslog` input. The extractors attached to the input parse the JSON in the syslog message and also replaces the `message` field with a short readable summary.
 
 ## Wrap Up
 
-Make sure logs are flowing in. You can now search fields such as `http_user_agent`, `request_method`, and `response_status`.
+Make sure logs are flowing in using the `Show received messages` for the `nginx-syslog` input. You can now search fields such as `http_user_agent`, `request_method`, and `response_status`.
 
 ## Resources
 
 [Logging to syslog - NGINX Docs](https://nginx.org/en/docs/syslog.html)
 
-[Graylog3 NGINX Content Pack](https://github.com/lewisgeorge-innoscale/graylog3-content-pack-nginx-docker)
+[Graylog NGINX Content Pack](https://github.com/scriptingislife/graylog-content-pack-nginx-syslog)
 
 [Graylog Marketplace](https://marketplace.graylog.org/)
