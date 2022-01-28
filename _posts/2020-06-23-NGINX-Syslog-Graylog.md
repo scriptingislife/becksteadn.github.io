@@ -13,7 +13,7 @@ Updated: Since many NGINX content packs are outdated and do not target baremetal
 Edit `/etc/nginx/nginx.conf` and add the following lines in the `Logging Settings` section. Replace `logging.example.com` with the domain or IP address of your Graylog server. Restart the service.
 
 ```jsx
-log_format graylog_json escape=json '{ "timestamp": "$time_iso8601", '
+log_format graylog_json escape=json '{ "nginx_timestamp": "$time_iso8601", '
        '"remote_addr": "$remote_addr", '
        '"connection": "$connection", '
        '"connection_requests": $connection_requests, '
@@ -45,6 +45,8 @@ error_log /var/log/nginx/error.log;
 ## Graylog Content Pack
 
 Download this [content pack](https://raw.githubusercontent.com/scriptingislife/graylog-content-pack-nginx-syslog/main/content_pack.json) and upload it to Graylog by going to `System → Content Packs` then install it. This will create the `nginx-syslog` input. The extractors attached to the input parse the JSON in the syslog message and also replace the `message` field with a short readable summary.
+
+Update (2021-01-28): The nginx ISO 8601 timestamp is not parseable by Graylog. To ensure a correct timestamp, Graylog adds a gl2_processing_error field and replaces the timestamp field with the current time. To correct the timestamp before this happens, the provided `nginx.conf` was modified to use the field `nginx_timestamp`. An extractor was added to the content pack to copy the field to the `timestamp` field. It uses the Flexible Date converter to correctly parse the date and convert it to UTC.
 
 ## Wrap Up
 
