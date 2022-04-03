@@ -4,17 +4,9 @@ layout: post
 title: How to add Cognito to your AWS SAM app
 ---
 
-<style>
-  ul {
-    list-style-type: "\2601";
-  }
-  li code {
-    position: relative;
-    left: 10px;
-  }
-</style>
-
 The AWS Serverless Application Model (SAM) is a great way to start building APIs and other applications, but API endpoints are open by default. Amazon Cognito is a solution to add user sign up and sign in to a project. By the end of this post you will have created an API endpoint that requires authentication, registered a user, and called the endpoint.
+
+![Topology]({{site.baseurl}}/images/Cognito-AWS-SAM/explained.png)
 
 <h2>Contents</h2>
 * TOC
@@ -52,7 +44,7 @@ UserPool:
 
 If there's one thing to understand after this blog post, it's the app client and authentication flows. Amazon Cognito supports several flows. If none are specified using the property `ExplicitAuthFlows`, then `ALLOW_CUSTOM_AUTH`, `ALLOW_USER_SRP_AUTH`, and `ALLOW_REFRESH_TOKEN_AUTH` are used. `ALLOW_REFRESH_TOKEN_AUTH` is always required.
 
-In this example, `ALLOW_USER_PASSWORD_AUTH` is used. In this flow the client sends the username and plaintext password to Cognito. A more secure flow is recommended for production use. For other options see [User pool authentication flow](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html).
+In this example, `ALLOW_USER_PASSWORD_AUTH` is used. The client sends the username and plaintext password to Cognito. A more secure flow is recommended for production use. For other options see [User pool authentication flow](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html).
 
 ```yaml
 UserPoolClient:
@@ -85,7 +77,7 @@ UserPoolUser:
 
 [Resource Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-api.html)
 
-AWS SAM creates an API Gateway resource implicitly. We can specify it ourselves to have more control and add the Cognito properties. The `Auth` section sets the User Pool as an authorizer which can then be added to specific functions.
+AWS SAM creates an API Gateway resource implicitly. We can specify it ourselves to have more control. The `Auth` section sets the User Pool as an authorizer which can then be added to specific functions.
 
 ```yaml
 AppApi:
@@ -123,6 +115,8 @@ MyFunction:
 ```
 
 ### Variables
+
+CloudFormation parameters can be used to pass in environment variables. `Parameters` should be a top level field along with `Globals` and `Resources`. `APIStageName` is hardcoded as `api` in this example but could be set to a version number or specify a dev/prod environment.
 
 ```yaml
 Parameters:
@@ -188,6 +182,16 @@ curl -H "Authorization: Bearer <ID-TOKEN>" https://<API-ID>.execute-api.us-east-
 ## Recap
 
 The CloudFormation included in this post creates the resources necessary to put API endpoints behind authentication. The resources are:
+
+<style>
+  ul {
+    list-style-type: "\2601";
+  }
+  li code {
+    position: relative;
+    left: 10px;
+  }
+</style>
 
 * `AWS::Cognito::UserPool`
 * `AWS::Cognito::UserPoolClient`
