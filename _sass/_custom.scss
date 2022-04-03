@@ -6,6 +6,10 @@
     font-size: 18px;
 }
 
+#markdown-toc li {
+  list-style-type: none !important;
+}
+
 a {
     color: $purple !important;
     &:hover, &:active {

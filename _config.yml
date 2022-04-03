@@ -1,15 +1,13 @@
 ---
 title: Scripting is Life
-timezone: UTC
+timezone: Etc/UTC
 collections:
   posts:
-    title: Posts
     output: true
   uploads:
-    title: Uploads
     output: true
 name: Scripting is Life
-description: The journey of a security analyst with too many projects.
+description: The journey of a security professional with too many projects.
 avatar: "/images/profile.png"
 paginate: 5
 footer-links:
@@ -26,7 +24,7 @@ footer-links:
   stackoverflow: 
   youtube: 
   googleplus: 
-disqus: becksteadn-blog.disqus.com
+#disqus: becksteadn-blog.disqus.com
 google_analytics: UA-90662247-1
 url: https://scriptingis.life
 baseurl: ''
@@ -38,7 +36,7 @@ kramdown:
   syntax_highlighter_opts:
     css_class: highlight
 sass:
-  style: :expanded
+  style: expanded
 plugins:
 - jekyll-sitemap
 - jekyll-feed

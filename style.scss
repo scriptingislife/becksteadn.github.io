@@ -23,7 +23,7 @@ body {
 	background: $white;
   background-image:url(images/ep_naturalblack.png);
   font: 18px/1.4 $helvetica;
-  color: $white;
+  color: $bodyColor;
 }
 
 .container {
@@ -35,7 +35,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $white;
+  color: $headerColor;
   font-weight: bold;
 
   line-height: 1.7;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 30px;
   a {
-    color: $white;
+    color: $altBodyColor;
   }
 }
 
@@ -282,7 +282,7 @@ nav {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
-    color: $white;
+    color: $bodyColor;
     font-size: 22px;
     font-style: italic;
   }
