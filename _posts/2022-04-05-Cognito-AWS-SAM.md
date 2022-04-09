@@ -8,6 +8,10 @@ The AWS Serverless Application Model (SAM) is a great way to start building APIs
 
 ![Topology]({{site.baseurl}}/images/Cognito-AWS-SAM/explained.png)
 
+<h2>Contents</h2>
+* TOC
+{:toc}
+
 ## The Ingredients
 
 ### User Pool
