@@ -14,6 +14,8 @@ The AWS Serverless Application Model (SAM) is a great way to start building APIs
 
 ## The Ingredients
 
+The following resources can be added to any [AWS SAM](https://aws.amazon.com/serverless/sam/) application. An example application can be found [on GitHub](https://github.com/scriptingislife/sam-cognito-example).
+
 ### User Pool
 
 [Resource Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html)
