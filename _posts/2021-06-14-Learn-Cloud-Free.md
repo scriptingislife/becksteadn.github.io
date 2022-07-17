@@ -8,7 +8,7 @@ Cloud skills are hot right now, but unlike learning Python or running a Docker c
 
 ![So Hot Right Now]({{site.baseurl}}/images/Learn-Cloud-Free/SoHotRN.png)
 
-As a college freshman, the [GitHub Student Developer Pack](http://education.github.com/pack) was a treasure trove of premium software development tools and platforms that I could access for free. One benefit was $100 in AWS credit every year.  It's no longer an item in the pack, but the credits are still available through [AWS Educate](https://awseducate.com).
+As a college freshman, the [GitHub Student Developer Pack](http://education.github.com/pack) was a treasure trove of premium software development tools and platforms that I could access for free. One benefit was $100 in AWS credit every year.  It's no longer an item in the pack, but the credits are still available through [AWS Educate](https://www.awseducate.com).
 
 At first I just used the credits for virtual machines that I could run 24/7. As I gained more knowledge about AWS I started exploring other services. Lambda and API Gateway quickly became my favorites. I used them to build [Glimpse ID](https://glimpseid.com), a sandbox for suspicious URLs.
 
